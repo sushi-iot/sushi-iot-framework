@@ -677,11 +677,11 @@
 <h2 id="check-supported-board"><strong>Check supported board</strong></h2>
 <p>Sushi-IoT-Framework can run on microcontroller boards based on ESP32 SoC.<br />
 There are many different ESP32 SoC variants, to start from somewhere the 1st version of Sushi-IoT-Framework can support the WROVER model (the one with extra 4MB SPI-RAM).  </p>
-<p>Check the <a href="../download/#supported-boards">SIC supported boards</a> list in the download page.  </p>
+<p>Check the <a href="../download/#supported-boards">Sushi-IoT-Framework supported boards</a> list in the download page.  </p>
 <p><strong>If you do not have any specific compatible board you can still use Sushi-IoT-Framework for a generic board matching the ESP32 SoC chip on it.</strong></p>
 <h2 id="getting-the-firmware"><strong>Getting the firmware</strong></h2>
 <p>In the Sushi-IoT-Framework download page there is a table with all the releases. To get the latest features and fixes, it's recommended to use the latest stable version available.<br />
-Check the <a href="../download/#latest">SIC firmware download</a>.</p>
+Check the <a href="../download/">Sushi-IoT-Framework firmware download</a>.</p>
 <h2 id="flash-the-firmware"><strong>Flash the firmware</strong></h2>
 <p>Flashing the firmware can vary depending on the specific board you are using (in that case please check the producer documentation for more details).  </p>
 <p>We document here <strong>2 options</strong> to flash the firmware that can fit most ESP32 boards.  </p>
@@ -720,7 +720,7 @@ This is an easier alternative compared to the Python ".py" version of the tool, 
 </code></pre>
 <h4 id="flash-the-firmware-file"><strong>Flash the firmware file</strong></h4>
 <p><code>esptool write_flash 0x0 FIRMWARE.bin</code></p>
-<p>Where "<em>FIRMWARE</em>" is the firmware .bin file that you downloaded. See <a href="../download/#latest">SIC firmware download</a>.</p>
+<p>Where "<em>FIRMWARE</em>" is the firmware .bin file that you downloaded. See <a href="../download/">Sushi-IoT-Framework firmware download</a>.</p>
 <h4 id="troubleshooting_1"><strong>Troubleshooting</strong></h4>
 <ul>
 <li><strong>esptool fails to detect the correct COM port</strong>: specify it with the "--port" option in front of the command.</li>
@@ -765,7 +765,7 @@ Be careful to open "<em>http://</em>" and not "<em>https://</em>", since HTTPS i
 <li><strong>Password</strong>: "1976"</li>
 </ul>
 <p>From the web interface, you can set the base system settings and configure the device to connect to your Wi-Fi network.<br />
-For more details about the Sushi-IoT-Framework web interface, refer to the <a href="../manual/#setup">setup section</a>.</p>
+For more details about the Sushi-IoT-Framework web interface, refer to the <a href="../manual/#system-setup">setup section</a>.</p>
 <h2 id="start-coding"><strong>Start coding</strong></h2>
 <p>Once your device is configured, you can start coding with your favorite MicroPython interface.<br />
 In the examples in this guide, Thonny is usually used, but there are several alternatives. For more details, please refer to the <a href="../manual/#coding">coding section</a>.</p>
