@@ -1,14 +1,30 @@
-# TEST GPIO
+# gpin_example.py [v20250929]
+
 print("Testing GPIN...")
-g = sushi.cmd('read_gpin' , 0)
-print("Value:" , g[1])
 
+# --- Read initial input value ---
+# sushi.cmd('read_gpin', idx) returns a tuple:
+#   [0] = function result (0 = no error)
+#   [1] = input value
+myinput = sushi.cmd('read_gpin', 0)
+if myinput[0] == 0:
+    print("Value:", myinput[1])
+
+
+# --- Callback executed when input status changes ---
 def gpin_change_callback(source):
-    if source == 0:	#source is IO-Expander
-        v = sushi.cmd('read_gpin' , 0)
-        if v[0] == 0:		#no errors occured
-            print("GPIN value:" , bin(v[1]))	#print the input value in binary
-        else:
-            print("GPIN read error:" , v[0])
+    """
+    source = origin of the interrupt (0 = IO-Expander)
 
-sushi.cmd('set_gpin_int' , gpin_change_callback)
+    Reads GPIN again and prints the value in binary if no error occurred.
+    """
+    if source == 0:
+        v = sushi.cmd('read_gpin', 0)
+        if v[0] == 0:
+            print("GPIN value:", bin(v[1]))
+        else:
+            print("GPIN read error:", v[0])
+
+
+# --- Register callback ---
+sushi.cmd('set_gpin_int', gpin_change_callback)
