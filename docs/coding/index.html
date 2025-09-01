@@ -20,7 +20,7 @@
     
     
       
-        <title>API reference - Sushi IoT Framework</title>
+        <title>MicroPython coding - Sushi IoT Framework</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sushi-iot-framework-micropython-api-reference" class="md-skip">
+        <a href="#sushi-iot-framework-micropython-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API reference
+              MicroPython coding
             
           </span>
         </div>
@@ -216,28 +216,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Workflow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../getting_started/" class="md-nav__link">
         
   
@@ -296,7 +274,7 @@
   
   
   <span class="md-ellipsis">
-    API reference
+    MicroPython coding
     
   </span>
   
@@ -309,7 +287,7 @@
   
   
   <span class="md-ellipsis">
-    API reference
+    MicroPython coding
     
   </span>
   
@@ -332,14 +310,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#micropython" class="md-nav__link">
+  <a href="#micropython-introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      MicroPython
+      MicroPython introduction
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MicroPython">
+    <nav class="md-nav" aria-label="MicroPython introduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      For beginners
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to the board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-a-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a user interface
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#auto-run-a-script" class="md-nav__link">
@@ -374,83 +379,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sushi-embedded-modules" class="md-nav__link">
+  <a href="#sushi-micropython-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Sushi embedded modules
+      Sushi Micropython interface
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sushi embedded modules">
+    <nav class="md-nav" aria-label="Sushi Micropython interface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#core-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Core module
+      CORE MODULE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core module">
+    <nav class="md-nav" aria-label="CORE MODULE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#params" class="md-nav__link">
+  <a href="#system" class="md-nav__link">
     <span class="md-ellipsis">
-      Params
+      SYSTEM
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#return" class="md-nav__link">
+  <a href="#modem" class="md-nav__link">
     <span class="md-ellipsis">
-      Return
+      MODEM
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-commands" class="md-nav__link">
+  <a href="#power" class="md-nav__link">
     <span class="md-ellipsis">
-      System commands
+      POWER
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modem-commands" class="md-nav__link">
+  <a href="#menu" class="md-nav__link">
     <span class="md-ellipsis">
-      Modem commands
+      MENU
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#power-management-commands" class="md-nav__link">
+  <a href="#gpio-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Power management commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio-sensors-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPIO &amp; sensors commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#menu-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      MENU commands
+      GPIO &amp; SENSORS
     </span>
   </a>
   
@@ -462,19 +449,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-modules" class="md-nav__link">
+  <a href="#frozen-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Extension modules
+      FROZEN MODULES
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extension modules">
+    <nav class="md-nav" aria-label="FROZEN MODULES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sushi_menu-module" class="md-nav__link">
     <span class="md-ellipsis">
-      'sushi_menu' module
+      sushi_menu module
     </span>
   </a>
   
@@ -496,6 +483,21 @@
       Examples
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#see-here-all-sushi-micropython-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      See here all Sushi MicroPython examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -556,14 +558,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#micropython" class="md-nav__link">
+  <a href="#micropython-introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      MicroPython
+      MicroPython introduction
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MicroPython">
+    <nav class="md-nav" aria-label="MicroPython introduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      For beginners
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to the board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-a-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a user interface
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#auto-run-a-script" class="md-nav__link">
@@ -598,83 +627,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sushi-embedded-modules" class="md-nav__link">
+  <a href="#sushi-micropython-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Sushi embedded modules
+      Sushi Micropython interface
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sushi embedded modules">
+    <nav class="md-nav" aria-label="Sushi Micropython interface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#core-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Core module
+      CORE MODULE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core module">
+    <nav class="md-nav" aria-label="CORE MODULE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#params" class="md-nav__link">
+  <a href="#system" class="md-nav__link">
     <span class="md-ellipsis">
-      Params
+      SYSTEM
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#return" class="md-nav__link">
+  <a href="#modem" class="md-nav__link">
     <span class="md-ellipsis">
-      Return
+      MODEM
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-commands" class="md-nav__link">
+  <a href="#power" class="md-nav__link">
     <span class="md-ellipsis">
-      System commands
+      POWER
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modem-commands" class="md-nav__link">
+  <a href="#menu" class="md-nav__link">
     <span class="md-ellipsis">
-      Modem commands
+      MENU
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#power-management-commands" class="md-nav__link">
+  <a href="#gpio-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Power management commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio-sensors-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPIO &amp; sensors commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#menu-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      MENU commands
+      GPIO &amp; SENSORS
     </span>
   </a>
   
@@ -686,19 +697,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-modules" class="md-nav__link">
+  <a href="#frozen-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Extension modules
+      FROZEN MODULES
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extension modules">
+    <nav class="md-nav" aria-label="FROZEN MODULES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sushi_menu-module" class="md-nav__link">
     <span class="md-ellipsis">
-      'sushi_menu' module
+      sushi_menu module
     </span>
   </a>
   
@@ -721,6 +732,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#see-here-all-sushi-micropython-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      See here all Sushi MicroPython examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -739,14 +765,75 @@
 
 
 
-<h1 id="sushi-iot-framework-micropython-api-reference"><strong>Sushi-IoT-Framework MicroPython API Reference</strong></h1>
-<p>If you are new to MicroPython development, the advice is to check the <a href="../manual/#coding">manual coding section</a>, then start from the examples section where you can find some ready-to-use scripts to test and modify.</p>
-<hr />
-<h2 id="micropython"><strong>MicroPython</strong></h2>
+<h1 id="sushi-iot-framework-micropython-interface"><strong>Sushi-IoT-Framework MicroPython interface</strong></h1>
+<h2 id="micropython-introduction"><strong>MicroPython introduction</strong></h2>
 <p>Sushi-IoT-Framework embeds the great MicroPython project, so you can basically rely on all the MicroPython modules included and available online. That's a lot of stuff.<br />
-A good starting point for ESP32 is the <a href="https://docs.micropython.org/en/latest/esp32/quickref.html">ESP32 MicroPython quick reference</a>, which gives a brief overview of the most common modules on the ESP32 microcontroller.<br />
-In all coding examples we also use many standard MicroPython interfaces and modules. These modules are not deeply documented in this reference since you can find all the details in other online resources that focus on MicroPython firmware development.<br />
-Here we focus only on the most important base concepts and highlight the differences between using standard MicroPython alone or inside Sushi-IoT-Framework. </p>
+Here we focus on the most important base concepts and highlight the differences between using standard MicroPython alone or inside Sushi-IoT-Framework. </p>
+<hr />
+<h3 id="for-beginners"><strong>For beginners</strong></h3>
+<p>If you are new to MicroPython development, the advice is follow these steps:</p>
+<ol>
+<li><a href="#connect-to-the-board">Connect your board</a> with USB cable</li>
+<li><a href="#choose-a-user-interface">Choose a user interface</a> for MicroPython scripting</li>
+<li>Browse the <a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples">examples</a> section where you can start play with some scripts ready to test and modify.</li>
+</ol>
+<p><strong>Resources:</strong></p>
+<ul>
+<li><a href="https://docs.micropython.org/en/latest/esp32/quickref.html">ESP32 MicroPython quick reference</a>, which gives a brief overview of the most common modules on the ESP32 microcontroller.  </li>
+<li><a href="#sushi-micropython-interface">Sushi-IoT-Framework MicroPython interface</a></li>
+</ul>
+<hr />
+<h3 id="connect-to-the-board"><strong>Connect to the board</strong></h3>
+<p>The first step to start coding is to connect to the MicroPython REPL interface.<br />
+There are basically two alternatives to program your scripts on the board:</p>
+<ul>
+<li>
+<p><strong>Connect with USB cable directly to the micro board using the USB/UART REPL interface.</strong><br />
+  This is the most common, quick, and reliable solution to program your board. If you have a PC and no problems connecting by cable to the board, this is the best way.</p>
+</li>
+<li>
+<p><strong>Connect via Web interface (WebREPL).</strong><br />
+  WebREPL is an alternative. From our tests, it works, <strong>but</strong> there are some issues and aspects to improve before recommending it as the best solution. Even in the MicroPython project, it is still considered experimental.<br />
+  The first thing to consider is that every time the board is reset (quite common during script development), the network connection is lost, so you have to wait until it reconnects.<br />
+  <!-- UPG: WebREPL improvements are planned in Sushi-IoT-Framework -->
+</p>
+</li>
+</ul>
+<p><strong>Big advantages of WebREPL are:</strong></p>
+<blockquote>
+<ul>
+<li>You do not need a cable connection to the device  </li>
+<li>Once connected via a browser, you can code from any device, not only from a classic Windows, Linux, or Mac PC</li>
+</ul>
+</blockquote>
+<p>For these reasons, WebREPL will surely be the subject of future improvements.</p>
+<hr />
+<h3 id="choose-a-user-interface"><strong>Choose a user interface</strong></h3>
+<p><em>This section is for those who have no experience with MicroPython</em>  </p>
+<p>Once the board is connected to your PC (or theoretically using WebREPL), there are several user interfaces you can use to develop your scripts.<br />
+The REPL interface is an interpreter that executes MicroPython commands, so from this interface you can interact with the device.<br />
+The MicroPython command set includes commands to save/read files on the device's internal memory, which is managed by a file system accessible from MicroPython.</p>
+<p>You could use REPL from any serial terminal that opens the COM port, but interacting at such a low level is not comfortable for development beyond simple tests.  </p>
+<p>For this reason, there are utilities that provide a <strong>higher-level interface</strong>, letting you quickly perform tasks such as:</p>
+<ul>
+<li>Save Python files to the device memory (usually <code>.py</code> files), including:<blockquote>
+<ul>
+<li>Your application script files  </li>
+<li>New classes or MicroPython components to add functionality to the device</li>
+</ul>
+</blockquote>
+</li>
+<li>Open and edit files directly on the device</li>
+<li>Run the <code>.py</code> scripts in the device</li>
+<li>Perform other actions, like restarting the device to test startup behavior after adding auto-run scripts</li>
+</ul>
+<p>Some common interfaces for MicroPython development include:</p>
+<ul>
+<li><a href="https://labs.arduino.cc/en/labs/micropython">Arduino Lab for MicroPython</a> – Arduino solution for MicroPython development  </li>
+<li><a href="https://thonny.org">Thonny</a> – Simple interface, easy to use even for beginners  </li>
+<li><a href="https://docs.micropython.org/en/latest/reference/mpremote.html">mpremote</a> – Command-line tool developed for MicroPython. Great for advanced users who prefer working with their own editor and sending commands from the prompt (Windows) or bash (Linux). Also useful for running scripts directly on the device.</li>
+</ul>
+<p>It’s up to you which interface to choose. In our examples/tests, we often used <strong>Thonny</strong>.</p>
 <hr />
 <h3 id="auto-run-a-script"><strong>Auto run a script</strong></h3>
 <p>After you develop a script that performs some function, it is typical to want it to run automatically when the device starts.<br />
@@ -761,7 +848,7 @@ It is important to know that MicroPython automatically runs two scripts at every
 <p>Sushi-IoT-Framework manages some system/hardware tasks that in certain cases can conflict with the MicroPython implementation.<br />
 The following table highlights some points to consider during MicroPython scripting.  </p>
 <p>Even though in the current release of Sushi-IoT-Framework there are some limitations, the roadmap is to remove them in future updates, allowing everything to be managed either by MicroPython or by Sushi-IoT-Framework modules.<br />
-This table refers to the latest available version of Sushi-IoT-Framework-MicroPython integration: <a href="../manual/#versions">Sushi-IoT-Framework version</a>.</p>
+This table refers to the latest available version of Sushi-IoT-Framework-MicroPython integration: <a href="https://github.com/sushi-iot/sushi-iot-framework/tree/main/firmware">Sushi-IoT-Framework version</a>.</p>
 <table>
 <thead>
 <tr>
@@ -786,14 +873,28 @@ This table refers to the latest available version of Sushi-IoT-Framework-MicroPy
 <hr />
 <h3 id="known-bugs"><strong>Known bugs</strong></h3>
 <p>During MicroPython testing some bugs arose. The plan is to update the embedded MicroPython implementation to remove them.</p>
-<p><strong>MicroPython known bugs</strong>
-| MicroPython module | Problem |
-|---|---|
-| WebREPL | WebREPL is working but it's an experimental feature. During testing, cases were experienced where it completely blocked the microcontroller (requiring a power cycle). |
-| time | <em>time.localtime()</em> function returns the wrong year. Other fields are correct. |</p>
+<p><strong>MicroPython known bugs</strong></p>
+<table>
+<thead>
+<tr>
+<th>MicroPython module</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebREPL</td>
+<td>WebREPL is working but it's an experimental feature. During testing, cases were experienced where it completely blocked the microcontroller (requiring a power cycle).</td>
+</tr>
+<tr>
+<td>time</td>
+<td><em>time.localtime()</em> function returns the wrong year. Other fields are correct.</td>
+</tr>
+</tbody>
+</table>
 <p><a href="mailto:mo.iot.wiz@gmail.com?subject=Issue%20report">Report an issue to mo.iot.wiz@gmail.com</a></p>
 <hr />
-<h2 id="sushi-embedded-modules"><strong>Sushi embedded modules</strong></h2>
+<h2 id="sushi-micropython-interface"><strong>Sushi Micropython interface</strong></h2>
 <p>Sushi-IoT-Framework extend the base MicroPython interface with some modules that let perform quickly certain task.  Over the <a href="../manual/#integrated-tasks-components">system tasks</a> that Sushi-IoT-Framework integrates these MicroPython modules are another advantage that let speed up your development, simplying to the minimum the complexity to perform certain operation.
 For example with just some line of code you can do operations like:</p>
 <ul>
@@ -802,177 +903,94 @@ For example with just some line of code you can do operations like:</p>
 </ul>
 <p>The MicroPython modules embedded in Sushi-IoT-Framework are 2 types:</p>
 <ul>
-<li><a href="#core-module">Sushi core module</a>. The core of Sushi-IoT-Framework MicroPython interface, this module is developed in background in C language and include all Sushi-IoT-Framework MicroPython extensions.</li>
-<li><a href="#extension-modules">Extension modules</a>. These are classic ".py" modules embedded into Sushi-IoT-Framework firmware and uses in background the Sushi core module to perform the most common operations in the <em>simpler way possible</em>.  This is because sometimes use directly the Sushi MicroPython module can be a little more tricky.</li>
+<li>Sushi core module. The core of Sushi-IoT-Framework MicroPython interface, this module is developed in background in C language and include all Sushi-IoT-Framework MicroPython extensions.</li>
+<li>Extension modules. These are classic ".py" modules embedded into Sushi-IoT-Framework (called <em>frozen</em> modules) firmware and uses in background the Sushi core module to perform the most common operations in the <em>simpler way possible</em>.  This is because sometimes use directly the Sushi MicroPython module can be a little more tricky.</li>
 </ul>
 <hr />
-<h3 id="core-module">Core module</h3>
+<h3 id="core-module">CORE MODULE</h3>
 <p>This module is the core of Sushi-IoT-Framework MicroPython interface, is developed in background in C language and include all Sushi-IoT-Framework MicroPython extensions.</p>
 <pre><code class="language-python">import sushi
+sushi.help()    #Show quick reference
 </code></pre>
 <p><strong><em>sushi</em></strong> module has one main function <strong><em>cmd</em></strong>:</p>
 <pre><code class="language-python">sushi.cmd(command , params)
 </code></pre>
-<hr />
-<h4 id="params"><strong>Params</strong></h4>
+<p>All sushi.cmd("command",...) return a tuple: (<code>err</code>:int, <code>result</code>:var)<br />
+<code>err</code> = 0   =&gt; OK, <code>result</code> contains the command-specific value<br />
+<code>err</code> != 0  =&gt; ERROR, <code>result</code> contains the error message (str)  </p>
+<h4 id="system">SYSTEM</h4>
 <ul>
-<li><em>command</em> (str) : command to be executed</li>
-<li><em>params</em> (variable) : optional params depending on "command* (see the table below)</li>
+<li><code>sushi.cmd("ver")</code> -&gt; str<br />
+  Show the firmware version of the board  </li>
+<li><code>sushi.cmd("restart" [, delay_ms:int=2000])</code> -&gt; none<br />
+  Restart the board after the optional delay in milliseconds  </li>
+<li><code>sushi.cmd("set_log", level:int [0=disable,1=enable,255=extended])</code> -&gt; none<br />
+  Enable or disable REPL logging  </li>
+<li><code>sushi.cmd("register", code:str)</code> -&gt; none<br />
+  Register the device with a unique 64-character code  </li>
+<li><code>sushi.cmd("factory_reset")</code> -&gt; none<br />
+  Restore factory default settings  </li>
 </ul>
-<hr />
-<h4 id="return"><strong>Return</strong></h4>
-<p>Return a tuple: (error , reply)</p>
+<h4 id="modem">MODEM</h4>
 <ul>
-<li><em>error</em> (int) : error code. If 0 no error.</li>
-<li><em>reply</em> (variable) : specific answer depending on <em>command</em> (if any) or generic ACK/ERROR message.</li>
+<li>
+<p><code>sushi.cmd("set_modem_hnd", callback:func)</code> -&gt; none<br />
+  Set a callback to handle modem events.<br />
+<code>callback</code> args (a:tuple):<br />
+    a[0] = event type [0=SMS received, 1=Incoming call, 2=SMS TX result]<br />
+    a[1..] = event-specific data  </p>
+<ul>
+<li>if a[0] = 0 → (call_number:str, sms_text:str, time:str)  </li>
+<li>if a[0] = 1 → (call_number:str)  </li>
+<li>if a[0] = 2 → (id:int, tx_result:int [1=OK, 0=ERROR])  </li>
 </ul>
-<hr />
-<h4 id="system-commands"><strong>System commands</strong></h4>
-<table>
-<thead>
-<tr>
-<th><em>command</em></th>
-<th><em>notes</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>help</em></td>
-<td>Show help<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: HELP_TEXT(str)<br>&bull;<em>Example</em>:sushi.cmd("help")</td>
-</tr>
-<tr>
-<td><em>ver</em></td>
-<td>Get version<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: VERSION(str)<br>&bull;<em>Example</em>:sushi.cmd("ver")</td>
-</tr>
-<tr>
-<td><em>restart</em></td>
-<td>Restart device<br>&bull;<em>params</em>: DELAY_ms(int) : OPTIONAL, default:2000<br>&bull;<em>reply</em>:generic ACK/ERROR<br>&bull;<em>Example</em>:sushi.cmd("restart" , 2500)</td>
-</tr>
-<tr>
-<td><em>set_log</em></td>
-<td>Enable the LOG on REPL<br>&bull;<em>params</em>: LOG_LEVEL(int) : 0 = disable , 1 = enable , 255 = extended<br>&bull;<em>reply</em>:generic ACK/ERROR<br>&bull;<em>Example</em>:sushi.cmd("set_log" , 1)</td>
-</tr>
-<tr>
-<td><em>factory_reset</em></td>
-<td>Reset to the default factory configuration<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>:generic ACK/ERROR<br>&bull;<em>Example</em>:sushi.cmd("factory_reset")</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="modem-commands"><strong>Modem commands</strong></h4>
-<table>
-<thead>
-<tr>
-<th><em>command</em></th>
-<th><em>notes</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>send_sms</em></td>
-<td>Send a SMS<br>&bull;<em>params</em>: tuple(TEXT(str) , NUMBER(str))<br>&bull;<em>reply</em>: SMS_ID(int)  <br>&bull;<em>Example</em>: sushi.cmd("send_sms" , ("hello !" , "+39339535xxxx" ) )</td>
-</tr>
-<tr>
-<td><em>set_modem_hnd</em></td>
-<td>Set modem events callback handler<br>&bull;<em>params</em>: MODEM_CALLBACK(func)<br>MODEM_CALLBACK (ARGS(tuple)) : callback function called when an even occurs, pass 1 tuble parameter "ARGS":<br>* ARGS[0] (int) : event type [0 = SMS received ; 1 = incoming call ; 2 = SMS TX result]  <br>* ARGS[1..N] : event specific data<br>- if ARGS[0] = 0 :  call_number(str), sms_text(str) , time(str)  <br>- if ARGS[0] = 1 :  call_number(str)  <br>- if ARGS[0] = 2 :  id(int) , tx_result(int) [1 = OK ; 0 = ERROR]<br>&bull;<em>reply</em>: generic ACK/ERROR<br>&bull;<em>Example</em>:see <a href="#examples">Sushi-IoT-Framework examples</a>. <!--UPG:link esempio eventi modem--></td>
-</tr>
-</tbody>
-</table>
-<!--UPGRADE (non hanno senso con gestione automatica. Se si permette disattivazione gestione automatica allora bisogna leggere e cancellare)
-|*read_sms*|Read a SMS from SIM<br>&bull;*params*: index(int) : 0...N<br>&bull;*reply*: tuple(number(str) , text(str))<br>Return ERROR if index do not exists in SIM memory  | sushi.cmd("read_sms" , 1 )
-|*del_sms*|Erase an SMS from SIM<br>&bull;*params*: index(int) : 0...N<br>&bull;*reply*: generic ACK/ERROR  | sushi.cmd("del_sms" , 1 )
-inconming_call_callback (modem deve supportare chiamate entrata)
--->
-<hr />
-<h4 id="power-management-commands"><strong>Power management commands</strong></h4>
-<table>
-<thead>
-<tr>
-<th><em>command</em></th>
-<th><em>notes</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>read_power_state</em></td>
-<td>Get main power state<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: STATE(int) [1 = ON ; 0 = OFF]  <br>&bull;<em>Example</em>: sushi.cmd("read_power_state")</td>
-</tr>
-<tr>
-<td><em>read_power_voltage</em></td>
-<td>Get main power voltage<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: VOLTS(float)  <br>&bull;<em>Example</em>: sushi.cmd("read_power_voltage")</td>
-</tr>
-<tr>
-<td><em>read_batt_level</em></td>
-<td>Get battery level<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: PERCENTAGE(float)  <br>&bull;<em>Example</em>: sushi.cmd("read_batt_level")</td>
-</tr>
-<tr>
-<td><em>read_batt_voltage</em></td>
-<td>Get battery voltage<br>&bull;<em>params</em>: none<br>&bull;<em>reply</em>: VOLTS(float)  <br>&bull;<em>Example</em>: sushi.cmd("read_batt_voltage")</td>
-</tr>
-</tbody>
-</table>
-<h4 id="gpio-sensors-commands"><strong>GPIO &amp; sensors commands</strong></h4>
-<table>
-<thead>
-<tr>
-<th><em>command</em></th>
-<th><em>notes</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>read_temperature</em></td>
-<td>Get temperature<br>&bull;<em>params</em>: SENSOR(int) [0=DS18B20-1 ; 1=DS18B20-2]<br>&bull;<em>reply</em>: TEMPERATURE(float)  <br>&bull;<em>Example</em>: sushi.cmd("read_temperature" , 0)</td>
-</tr>
-<tr>
-<td><em>read_gpin</em></td>
-<td>Read input from IO expander<br>&bull;<em>params</em>: SOURCE(int) [0=IO-Expander]<br>&bull;<em>reply</em>: STATUS(int). Each bit of the integer represents the state of an input.<br>&bull;<em>Example</em>: sushi.cmd("read_gpin" , 0)</td>
-</tr>
-<tr>
-<td><em>set_gpin_int</em></td>
-<td>Set input change interrupt<br>&bull;<em>params</em>: INTERRUPT_CALLBACK(func)<br>INTERRUPT_CALLBACK (ID(int)) : callback function called when input state change<br>* ID (int) : source [0 = IO-Expander]<br>&bull;<em>reply</em>: generic ACK/ERROR<br>&bull;<em>Example</em>: sushi.cmd("set_gpin_int" , interrupt_handler)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="menu-commands"><strong>MENU commands</strong></h4>
-<p>Before use this set of commands check the <a href="#sushi_menu-module">sushi_menu module</a> that has an higher level simpler interace.
-Examples : see <a href="#sushi_menu-module">sushi_menu module</a>.</p>
-<table>
-<thead>
-<tr>
-<th><em>command</em></th>
-<th><em>notes</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>new_menu</em></td>
-<td>Create a new MENU<br>&bull;<em>params</em>:TITLE (str) : menu title<br>&bull;<em>reply</em>: MENU_ID(int)</td>
-</tr>
-<tr>
-<td><em>new_menu_item_string</em></td>
-<td>Create a new MENU read-only string item<br>&bull;<em>params</em>:tuple(DESCRIPTION(str) , PRINT_CALLBACK(func))<br>&bull;<em>reply</em>: ENTRY_ID(int)</td>
-</tr>
-<tr>
-<td><em>new_menu_item_edit_list</em></td>
-<td>Create a new MENU editable item<br>&bull;<em>params</em>:tuple(DESCRIPTION(str) , CHANGED_CALLBACK(func) , INIT_VALUE_INDEX(int) , VALUE_1(str) , VALUE_2(str), ...)<br>&bull;<em>reply</em>: ENTRY_ID(int)</td>
-</tr>
-<tr>
-<td><em>add_entry_to_menu</em></td>
-<td>Add an entry to a MENU<br>&bull;<em>params</em>:tuple(MENU_ID(int) , ENTRY_ID(int))<br>&bull;<em>reply</em>: generic ACK/ERROR</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="extension-modules"><strong>Extension modules</strong></h3>
-<p>These modules are classic ".py" files embedded into Sushi-IoT-Framework firmware and uses in background the Sushi core module to perform the most common operations in the <em>simpler way possible</em>.<br />
-This is because sometimes use directly the Sushi MicroPython module can be a little more tricky.
-Please note that these modules are always present by default but are not visible into the file system.<br />
-You can find the source MicroPython code of any embedded module in this DOC and if required do changes: in this case just copy the new modified file into the device file system changing the class name, for example adding "_ext" to the name, to avoid any conflict with the embedded modules.</p>
-<hr />
-<h4 id="sushi_menu-module"><strong><em>'sushi_menu'</em></strong> module</h4>
-<p>This module expose a class that can be used to integrate custom menu into the system.</p>
+</li>
+<li>
+<p><code>sushi.cmd("send_sms", (text:str, number:str))</code> -&gt; int<br />
+  Send an SMS message; returns the SMS ID if command accepted  </p>
+</li>
+</ul>
+<h4 id="power">POWER</h4>
+<ul>
+<li><code>sushi.cmd("read_power_state")</code> -&gt; int [1=ON, 0=OFF]<br />
+  Get the main power state  </li>
+<li><code>sushi.cmd("read_power_voltage")</code> -&gt; float (V)<br />
+  Read the main power voltage  </li>
+<li><code>sushi.cmd("read_batt_level")</code> -&gt; float (%)<br />
+  Get the battery level in percent  </li>
+<li><code>sushi.cmd("read_batt_voltage")</code> -&gt; float (V)<br />
+  Read the battery voltage  </li>
+</ul>
+<h4 id="menu">MENU</h4>
+<p><em>! before use this interface see frozen module <code>sushi_menu</code></em></p>
+<ul>
+<li><code>sushi.cmd("new_menu", title:str)</code> -&gt; int (menu_id)<br />
+  Create a new menu with the given title  </li>
+<li><code>sushi.cmd("new_menu_item_string", (desc:str, print_cb:func))</code> -&gt; int (entry_id)<br />
+  Create a new string menu item with a callback for printing  </li>
+<li><code>sushi.cmd("new_menu_item_edit_list", (desc:str, changed_cb:func, init_index:int, val1:str, val2:str, ...))</code> -&gt; int (entry_id)<br />
+  Create a new editable list menu item with initial value and change callback  </li>
+<li><code>sushi.cmd("add_entry_to_menu", (menu_id:int, entry_id:int))</code> -&gt; none<br />
+  Add an entry to the specified menu  </li>
+</ul>
+<h4 id="gpio-sensors">GPIO &amp; SENSORS</h4>
+<ul>
+<li><code>sushi.cmd("read_temperature", sensor:int [0=DS18B20-1,1=DS18B20-2])</code> -&gt; float (°C)<br />
+  Read temperature from the selected sensor  </li>
+<li><code>sushi.cmd("read_gpin", source:int [0=IO-Expander])</code> -&gt; int (status)<br />
+  Read digital input from the specified source  </li>
+<li><code>sushi.cmd("set_gpin_int", callback:func)</code> -&gt; none<br />
+  Set a callback to detect changes in input state<br />
+  args (a:tuple)<br />
+<code>callback</code> args (source:int [0 = IO-Expander])  </li>
+</ul>
+<h3 id="frozen-modules">FROZEN MODULES</h3>
+<h4 id="sushi_menu-module"><strong><em>sushi_menu</em></strong> module</h4>
+<p>Simplified user menu management: this module expose a class that can be used to integrate custom menu into the system.  </p>
+<p>Usage:  </p>
+<pre><code class="language-python">import sushi_menu
+sushi_menu.help()
+</code></pre>
 <pre><code class="language-python">from sushi_menu import Submenu
 # Add a menu to the on-device interface
 mymenu = Submenu('Test Menu')
@@ -984,18 +1002,8 @@ mymenu.add_read_only_item(&quot;Test entry&quot; , ...)
 <li><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/modules/sushi_menu.py">Module Source code and DOC</a></li>
 <li><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples/menu_example.py">Full example</a></li>
 </ul>
-<!-- UPG #### ***'sushi_modem'*** module -->
-
-<hr />
 <h2 id="examples"><strong>Examples</strong></h2>
-<ul>
-<li><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples/menu_example.py">Manage relays with custom menu</a></li>
-</ul>
-<!-- UPGRADE: sezione con progetti completi
----
-## **Projects**
-//.... 
--->
+<h3 id="see-here-all-sushi-micropython-examples"><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples">See here all Sushi MicroPython examples</a></h3>
 
 
 

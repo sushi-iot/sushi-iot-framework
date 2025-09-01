@@ -19,4 +19,4 @@ Generic ESP32-WROVER board | Any board using a compatible WROVER SoC can possibl
 
 | Board           | File             | Firmware version | MicroPython version       | Description                |
 |-----------------|------------------|-----------------------------|---------------------------|----------------------------|
-| Sushi-IoT-Board | sib-1.2.0-2025.08.09.0.bin  | SIB-1.2.0--v2025.08.09.0     | 1.25.0 build 495ce91-dirty| Firmware for Sushi-IoT-Board |
+| Sushi-IoT-Board | sib-1.2.0-2025.08.09.0.bin  | SIB-1.2.0-v2025.08.09.0     | 1.25.0 build 495ce91-dirty| Firmware for Sushi-IoT-Board |

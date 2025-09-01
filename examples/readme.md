@@ -13,5 +13,5 @@ In the REPL, run:
   sushi.help()
 ```
 
-## Full manual
-[https://sushi-iot.github.io/sushi-iot-framework/](https://sushi-iot.github.io/sushi-iot-framework/)    
+## Online DOC
+[https://sushi-iot.github.io/sushi-iot-framework/](https://sushi-iot.github.io/sushi-iot-framework/coding)    

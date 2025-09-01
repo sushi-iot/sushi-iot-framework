@@ -12,7 +12,7 @@
         <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../api_reference/">
+        <link rel="next" href="../coding/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -216,28 +216,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Workflow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../getting_started/" class="md-nav__link">
         
   
@@ -310,9 +288,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
+  <a href="#coding" class="md-nav__link">
     <span class="md-ellipsis">
-      Versions
+      Coding
     </span>
   </a>
   
@@ -456,48 +434,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#coding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Coding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connect-to-the-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connect to the board
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-user-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choose a user interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Developing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -513,12 +449,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_reference/" class="md-nav__link">
+      <a href="../coding/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    API reference
+    MicroPython coding
     
   </span>
   
@@ -577,9 +513,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
+  <a href="#coding" class="md-nav__link">
     <span class="md-ellipsis">
-      Versions
+      Coding
     </span>
   </a>
   
@@ -723,48 +659,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#coding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Coding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connect-to-the-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connect to the board
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-user-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choose a user interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Developing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -782,36 +676,10 @@
 
 
 <h1 id="sushi-iot-framework-software-manual"><strong>Sushi-IoT-Framework Software Manual</strong></h1>
-<h2 id="versions"><strong>Versions</strong></h2>
-<p>This guide refers to the Sushi-IoT-Framework firmware versions listed in the following table.<br />
-Older versions of the manual are linked in the download/older releases page.<br />
-Note that Sushi-IoT-Framework is included in different board-specific firmware.</p>
-<table>
-<thead>
-<tr>
-<th>Firmware name</th>
-<th>Firmware version</th>
-<th>Sushi-IoT-Framework version</th>
-<th>MicroPython version</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sushi-board-IoT</td>
-<td>v.1.2.0</td>
-<td>sushi-iot_v2025.08.09.0</td>
-<td>1.25.0 build 495ce91-dirty</td>
-<td>Firmware for Sushi-IoT-Board</td>
-</tr>
-</tbody>
-</table>
-<!--
----
-## **Roadmap**
-UPG
--->
-
+<p>This guide refers to the Sushi-IoT-Framework <a href="https://github.com/sushi-iot/sushi-iot-framework/tree/main/firmware">latest firmware versions</a>.</p>
+<hr />
+<h2 id="coding"><strong>Coding</strong></h2>
+<p>Sushi-IoT-Framework embeds the MicroPython REPL interface, for coding refer to the <a href="../coding/">Sushi-IoT-Framework coding</a>.</p>
 <hr />
 <h2 id="integrated-tasks-components"><strong>Integrated tasks &amp; components</strong></h2>
 <p>Sushi-IoT-Framework integrates some common system tasks and software components that can be useful to speed up development.</p>
@@ -960,7 +828,7 @@ The configuration file can be saved or loaded from the web UI using the controls
 <h4 id="factory-restore"><strong>Factory restore</strong></h4>
 <ul>
 <li>If you lose Wi-Fi connection and just need to access the web UI, you can force AP mode by pressing the dedicated onboard button (see <a href="./#wi-fi-management">Wi-Fi extra functions</a>).  </li>
-<li>A full factory restore can be performed by sending a command from the MicroPython REPL, see <a href="../api_reference/#system-commands">factory_reset</a>.  </li>
+<li>A full factory restore can be performed by sending a command from the MicroPython REPL, see <a href="../coding/">Sushi-IoT-Framework coding</a>.  </li>
 </ul>
 <h4 id="advanced-settings"><strong>Advanced settings</strong></h4>
 <ul>
@@ -1162,18 +1030,18 @@ Basically the following submenus are present:</p>
 </ul>
 <p>Configuration parameters: <em>keyboard_enable</em>, <em>lcd_enable</em>, <em>ioex_enable</em>.</p>
 <p>The standard menu management uses a 4 buttons keyboard (<em>keyboard_enable</em> = 4) to navigate: <em>NEXT</em>, <em>PREVIOUS</em>, <em>BACK</em>, <em>ENTER</em>.</p>
-<p>The menu can be extended with application specific submenus by <a href="../api_reference/#sushi_menu-module">Sushi-IoT-Framework API</a>.</p>
+<p>The menu can be extended with application specific submenus by <a href="../coding/">Sushi-IoT-Framework coding</a>.</p>
 <hr />
 <h3 id="modem-management"><strong>Modem management</strong></h3>
 <p>Modem management component:</p>
 <ul>
 <li>Perform the background tasks to manage the modem by AT commands, including SIM management (PIN, SMS center, APN, etc.). This includes a quite reliable monitor of the modem status, performing all the actions to keep the modem always available and working properly. To achieve maximum reliability, it is recommended to also connect the MOS-controlled modem power control.</li>
-<li>Enable the Sushi-IoT-Framework API to easily perform high-level functions like send/receive SMS, perform HTTP GET/POST, and trigger actions when calls from certain numbers are received. See <a href="../api_reference/#modem-commands">modem API</a>.</li>
+<li>Enable the Sushi-IoT-Framework API to easily perform high-level functions like send/receive SMS, perform HTTP GET/POST, and trigger actions when calls from certain numbers are received. See <a href="../coding/">Sushi-IoT-Framework coding</a>.</li>
 </ul>
 <p>Anyone who worked on low-level modem management knows how tricky it can be to perform all the required tasks reliably. This component makes common operations quite easy.</p>
 <hr />
 <h3 id="temperature-sensor"><strong>Temperature sensor</strong></h3>
-<p>This component simply manages one or more temperature sensors that can be read in different ways: in the system status, in the user menus, or via <a href="../api_reference/#system-commands">Sushi-IoT-Framework API</a>.<br />
+<p>This component simply manages one or more temperature sensors that can be read in different ways: in the system status, in the user menus, or via <a href="../coding/">Sushi-IoT-Framework coding</a>.<br />
 Configuration parameter: <em>ext_temperature_sensor_enable</em>.</p>
 <hr />
 <h3 id="data-manager"><strong>Data manager</strong></h3>
@@ -1188,65 +1056,6 @@ Configuration parameter: <em>ext_temperature_sensor_enable</em>.</p>
 <p>The Sushi-IoT-Framework API provides an interface to this component, simplifying the process with minimal effort.<br />
 Configuration parameters: <em>http_post_delivery_address</em>, <em>use_wifi_for_http_post</em>.</p>
 <hr />
-<h2 id="coding"><strong>Coding</strong></h2>
-<p>Sushi-IoT-Framework embeds the MicroPython interface. You can rely on all the <a href="https://docs.micropython.org">MicroPython project documentation</a> and more, so here we will not go into too much detail. This section provides a brief introduction focusing on the differences and improvements compared to the official MicroPython project.</p>
-<hr />
-<h3 id="connect-to-the-board"><strong>Connect to the board</strong></h3>
-<p>The first step to start coding is to connect to the MicroPython REPL interface.<br />
-There are basically two alternatives to program your scripts on the board:</p>
-<ul>
-<li>
-<p><strong>Connect with USB cable directly to the micro board using the USB/UART REPL interface.</strong><br />
-  This is the most common, quick, and reliable solution to program your board. If you have a PC and no problems connecting by cable to the board, this is the best way.</p>
-</li>
-<li>
-<p><strong>Connect via Web interface (WebREPL).</strong><br />
-  WebREPL is an alternative. From our tests, it works, <strong>but</strong> there are some issues and aspects to improve before recommending it as the best solution. Even in the MicroPython project, it is still considered experimental.<br />
-  The first thing to consider is that every time the board is reset (quite common during script development), the network connection is lost, so you have to wait until it reconnects.<br />
-  <!-- UPG: WebREPL improvements are planned in Sushi-IoT-Framework -->
-</p>
-</li>
-</ul>
-<p><strong>Big advantages of WebREPL are:</strong></p>
-<blockquote>
-<ul>
-<li>You do not need a cable connection to the device  </li>
-<li>Once connected via a browser, you can code from any device, not only from a classic Windows, Linux, or Mac PC</li>
-</ul>
-</blockquote>
-<p>For these reasons, WebREPL will surely be the subject of future improvements.</p>
-<hr />
-<h3 id="choose-a-user-interface"><strong>Choose a user interface</strong></h3>
-<p><em>This section is for those who have no experience with MicroPython</em>  </p>
-<p>Once the board is connected to your PC (or theoretically using WebREPL), there are several user interfaces you can use to develop your scripts.<br />
-The REPL interface is an interpreter that executes MicroPython commands, so from this interface you can interact with the device.<br />
-The MicroPython command set includes commands to save/read files on the device's internal memory, which is managed by a file system accessible from MicroPython.</p>
-<p>You could use REPL from any serial terminal that opens the COM port, but interacting at such a low level is not comfortable for development beyond simple tests.  </p>
-<p>For this reason, there are utilities that provide a <strong>higher-level interface</strong>, letting you quickly perform tasks such as:</p>
-<ul>
-<li>Save Python files to the device memory (usually <code>.py</code> files), including:<blockquote>
-<ul>
-<li>Your application script files  </li>
-<li>New classes or MicroPython components to add functionality to the device</li>
-</ul>
-</blockquote>
-</li>
-<li>Open and edit files directly on the device</li>
-<li>Run the <code>.py</code> scripts in the device</li>
-<li>Perform other actions, like restarting the device to test startup behavior after adding auto-run scripts</li>
-</ul>
-<p>Some common interfaces for MicroPython development include:</p>
-<ul>
-<li><a href="https://labs.arduino.cc/en/labs/micropython">Arduino Lab for MicroPython</a> – Arduino solution for MicroPython development  </li>
-<li><a href="https://thonny.org">Thonny</a> – Simple interface, easy to use even for beginners  </li>
-<li><a href="https://docs.micropython.org/en/latest/reference/mpremote.html">mpremote</a> – Command-line tool developed for MicroPython. Great for advanced users who prefer working with their own editor and sending commands from the prompt (Windows) or bash (Linux). Also useful for running scripts directly on the device.</li>
-</ul>
-<p>It’s up to you which interface to choose. In our examples/tests, we often used <strong>Thonny</strong>.</p>
-<hr />
-<h3 id="developing"><strong>Developing</strong></h3>
-<p>Once you have installed a MicroPython UI interface and connected to the device, you are ready to start coding.  </p>
-<p>Refer directly to the <a href="../api_reference/">Sushi-IoT-Framework API reference</a>.  </p>
-<p>If you are new to MicroPython development, its recommended starting with the <a href="../api_reference/#examples">examples section</a>, where you can find ready-to-use scripts to test and modify.</p>
 
 
 
