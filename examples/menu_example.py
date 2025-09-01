@@ -1,5 +1,11 @@
 # menu_example.py [v202505132343]
 
+"""
+Example: Add a custom menu to user interface to switch ON/OFF a relay OUTPUT
+Remark: to avoid multiple instances of the same menu, 
+        always run this script doing a device "reset and restart"
+"""
+
 from sushi_menu import Submenu
 import time
 
