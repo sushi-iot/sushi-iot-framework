@@ -355,24 +355,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#differences-vs-micropython" class="md-nav__link">
-    <span class="md-ellipsis">
-      Differences vs MicroPython
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-bugs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Known bugs
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -531,6 +513,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/sushi-iot/sushi-iot-framework" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github repo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://sushi-iot.github.io/sushi-iot-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sushi Board
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -598,24 +624,6 @@
   <a href="#auto-run-a-script" class="md-nav__link">
     <span class="md-ellipsis">
       Auto run a script
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#differences-vs-micropython" class="md-nav__link">
-    <span class="md-ellipsis">
-      Differences vs MicroPython
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-bugs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Known bugs
     </span>
   </a>
   
@@ -767,8 +775,8 @@
 
 <h1 id="sushi-iot-framework-micropython-interface"><strong>Sushi-IoT-Framework MicroPython interface</strong></h1>
 <h2 id="micropython-introduction"><strong>MicroPython introduction</strong></h2>
-<p>Sushi-IoT-Framework embeds the great MicroPython project, so you can basically rely on all the MicroPython modules included and available online. That's a lot of stuff.<br />
-Here we focus on the most important base concepts and highlight the differences between using standard MicroPython alone or inside Sushi-IoT-Framework. </p>
+<p>Sushi-IoT-Framework integrates the MicroPython interpreter, giving you full access to the built-in firmware modules and the extensive set of libraries available online.
+Here we focus on the most important base concepts. </p>
 <hr />
 <h3 id="for-beginners"><strong>For beginners</strong></h3>
 <p>If you are new to MicroPython development, the advice is follow these steps:</p>
@@ -793,28 +801,26 @@ There are basically two alternatives to program your scripts on the board:</p>
 </li>
 <li>
 <p><strong>Connect via Web interface (WebREPL).</strong><br />
-  WebREPL is an alternative. From our tests, it works, <strong>but</strong> there are some issues and aspects to improve before recommending it as the best solution. Even in the MicroPython project, it is still considered experimental.<br />
-  The first thing to consider is that every time the board is reset (quite common during script development), the network connection is lost, so you have to wait until it reconnects.<br />
-  <!-- UPG: WebREPL improvements are planned in Sushi-IoT-Framework -->
-</p>
+  WebREPL is an alternative. From our tests it works, although there are still some issues and aspects to improve before recommending it as the best solution. Even in the MicroPython project it is considered experimental, but it will likely benefit from future improvements.
+  <!-- The first thing to consider is that every time the board is reset (quite common during script development), the network connection is lost, so you have to wait until it reconnects. --></p>
 </li>
 </ul>
-<p><strong>Big advantages of WebREPL are:</strong></p>
-<blockquote>
-<ul>
-<li>You do not need a cable connection to the device  </li>
-<li>Once connected via a browser, you can code from any device, not only from a classic Windows, Linux, or Mac PC</li>
-</ul>
-</blockquote>
-<p>For these reasons, WebREPL will surely be the subject of future improvements.</p>
+<!-- UPG: WebREPL improvements are planned in Sushi-IoT-Framework -->
+<!--
+  **Big advantages of WebREPL are:**
+  > - You do not need a cable connection to the device  
+  > - Once connected via a browser, you can code from any device, not only from a classic Windows, Linux, or Mac PC
+For these reasons, WebREPL will surely be the subject of future improvements.
+-->
+
 <hr />
 <h3 id="choose-a-user-interface"><strong>Choose a user interface</strong></h3>
 <p><em>This section is for those who have no experience with MicroPython</em>  </p>
-<p>Once the board is connected to your PC (or theoretically using WebREPL), there are several user interfaces you can use to develop your scripts.<br />
-The REPL interface is an interpreter that executes MicroPython commands, so from this interface you can interact with the device.<br />
-The MicroPython command set includes commands to save/read files on the device's internal memory, which is managed by a file system accessible from MicroPython.</p>
-<p>You could use REPL from any serial terminal that opens the COM port, but interacting at such a low level is not comfortable for development beyond simple tests.  </p>
-<p>For this reason, there are utilities that provide a <strong>higher-level interface</strong>, letting you quickly perform tasks such as:</p>
+<p>Once the board is connected to your PC, you can choose among several user interfaces to develop your scripts.
+The REPL interface is an interpreter that executes MicroPython commands, allowing you to interact directly with the device.
+Through REPL, you can also access commands to read and write files on the device’s internal memory, which is managed by a file system available in MicroPython.</p>
+<p>Although REPL can be used from any serial terminal that opens the COM port, working at such a low level quickly becomes impractical for development beyond simple tests.</p>
+<p>For this reason, utilities are available that provide a <strong>higher-level interface</strong>, making it easier to perform tasks such as:</p>
 <ul>
 <li>Save Python files to the device memory (usually <code>.py</code> files), including:<blockquote>
 <ul>
@@ -833,7 +839,7 @@ The MicroPython command set includes commands to save/read files on the device's
 <li><a href="https://thonny.org">Thonny</a> – Simple interface, easy to use even for beginners  </li>
 <li><a href="https://docs.micropython.org/en/latest/reference/mpremote.html">mpremote</a> – Command-line tool developed for MicroPython. Great for advanced users who prefer working with their own editor and sending commands from the prompt (Windows) or bash (Linux). Also useful for running scripts directly on the device.</li>
 </ul>
-<p>It’s up to you which interface to choose. In our examples/tests, we often used <strong>Thonny</strong>.</p>
+<p>The choice of interface is up to you. In our examples and tests, we often relied on <strong>Thonny</strong>.</p>
 <hr />
 <h3 id="auto-run-a-script"><strong>Auto run a script</strong></h3>
 <p>After you develop a script that performs some function, it is typical to want it to run automatically when the device starts.<br />
@@ -844,67 +850,18 @@ It is important to know that MicroPython automatically runs two scripts at every
 </ul>
 <p>These two scripts can be placed, like any other ".py" file, into the file system using your favourite MicroPython UI interface.</p>
 <hr />
-<h3 id="differences-vs-micropython"><strong>Differences vs MicroPython</strong></h3>
-<p>Sushi-IoT-Framework manages some system/hardware tasks that in certain cases can conflict with the MicroPython implementation.<br />
-The following table highlights some points to consider during MicroPython scripting.  </p>
-<p>Even though in the current release of Sushi-IoT-Framework there are some limitations, the roadmap is to remove them in future updates, allowing everything to be managed either by MicroPython or by Sushi-IoT-Framework modules.<br />
-This table refers to the latest available version of Sushi-IoT-Framework-MicroPython integration: <a href="https://github.com/sushi-iot/sushi-iot-framework/tree/main/firmware">Sushi-IoT-Framework version</a>.</p>
-<table>
-<thead>
-<tr>
-<th>MicroPython module</th>
-<th>Status</th>
-<th>Remarks</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ADC</td>
-<td>Disabled. The MicroPython implementation is not compatible with the current Sushi-IoT-Framework ADC management (most recent ESP32 drivers). Activating the ADC module is priority one. <!-- UPGRADE in the meantime <a href="link">Sushi-IoT-Framework-ADC-API</a> is available. --></td>
-<td></td>
-</tr>
-<tr>
-<td>Wi-Fi</td>
-<td>Disabled</td>
-<td>Sushi-IoT-Framework manages Wi-Fi connections with all the most common options. Using MicroPython would cause a conflict.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="known-bugs"><strong>Known bugs</strong></h3>
-<p>During MicroPython testing some bugs arose. The plan is to update the embedded MicroPython implementation to remove them.</p>
-<p><strong>MicroPython known bugs</strong></p>
-<table>
-<thead>
-<tr>
-<th>MicroPython module</th>
-<th>Problem</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>WebREPL</td>
-<td>WebREPL is working but it's an experimental feature. During testing, cases were experienced where it completely blocked the microcontroller (requiring a power cycle).</td>
-</tr>
-<tr>
-<td>time</td>
-<td><em>time.localtime()</em> function returns the wrong year. Other fields are correct.</td>
-</tr>
-</tbody>
-</table>
-<p><a href="mailto:mo.iot.wiz@gmail.com?subject=Issue%20report">Report an issue to mo.iot.wiz@gmail.com</a></p>
-<hr />
 <h2 id="sushi-micropython-interface"><strong>Sushi Micropython interface</strong></h2>
-<p>Sushi-IoT-Framework extend the base MicroPython interface with some modules that let perform quickly certain task.  Over the <a href="../manual/#integrated-tasks-components">system tasks</a> that Sushi-IoT-Framework integrates these MicroPython modules are another advantage that let speed up your development, simplying to the minimum the complexity to perform certain operation.
-For example with just some line of code you can do operations like:</p>
+<p>Sushi-IoT-Framework extends the base MicroPython interface with additional modules that allow you to quickly perform specific tasks.<br />
+Beyond the <a href="../manual/#integrated-tasks-components">system tasks</a> integrated into the framework these MicroPython modules offer another advantage: they speed up development by reducing the complexity of common operations to a minimum.
+For example, with just a few lines of code you can:</p>
 <ul>
-<li>send / receive an SMS to perform an operation remotely like switch on/off a light</li>
-<li>integrate the user interface menu to let manage a control locally on the device interface</li>
+<li>send or receive an SMS to remotely control a device, such as switching a light on or off</li>
+<li>integrate a local user interface menu to manage settings directly on the device</li>
 </ul>
-<p>The MicroPython modules embedded in Sushi-IoT-Framework are 2 types:</p>
+<p>The MicroPython modules embedded in Sushi-IoT-Framework fall into two categories:</p>
 <ul>
-<li>Sushi core module. The core of Sushi-IoT-Framework MicroPython interface, this module is developed in background in C language and include all Sushi-IoT-Framework MicroPython extensions.</li>
-<li>Extension modules. These are classic ".py" modules embedded into Sushi-IoT-Framework (called <em>frozen</em> modules) firmware and uses in background the Sushi core module to perform the most common operations in the <em>simpler way possible</em>.  This is because sometimes use directly the Sushi MicroPython module can be a little more tricky.</li>
+<li><strong>Sushi core module</strong> - the core of the Sushi-IoT-Framework MicroPython interface, developed in C and providing all the framework’s native extensions.</li>
+<li><strong>Extension modules</strong> - classic “.py” modules embedded in the firmware (as frozen modules). They rely on MicroPython interface in the background to perform the most common operations in the simplest way possible.</li>
 </ul>
 <hr />
 <h3 id="core-module">CORE MODULE</h3>
@@ -962,7 +919,7 @@ sushi.help()    #Show quick reference
   Read the battery voltage  </li>
 </ul>
 <h4 id="menu">MENU</h4>
-<p><em>! before use this interface see frozen module <code>sushi_menu</code></em></p>
+<p><em>! before use this interface consider use frozen module <code>sushi_menu</code></em></p>
 <ul>
 <li><code>sushi.cmd("new_menu", title:str)</code> -&gt; int (menu_id)<br />
   Create a new menu with the given title  </li>

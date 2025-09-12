@@ -434,6 +434,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#issue-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue &amp; Remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue &amp; Remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-vs-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences vs MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known bugs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -477,6 +510,50 @@
   
   <span class="md-ellipsis">
     Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/sushi-iot/sushi-iot-framework" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github repo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://sushi-iot.github.io/sushi-iot-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sushi Board
     
   </span>
   
@@ -659,6 +736,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#issue-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue &amp; Remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue &amp; Remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-vs-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences vs MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known bugs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -745,7 +855,7 @@
 <p>Some of the tasks integrated into Sushi-IoT-Framework manage external hardware.<br />
 So the questions are:</p>
 <ul>
-<li>On which pin connect the external devices</li>
+<li>On which pin of the micro connect the external devices</li>
 <li>What's the exact models of the chip that are managed</li>
 </ul>
 <p>The base is always an ESP32 SoC then the exact pin mapping used to manage the externals peripherical depends on the specific board you're using.<br />
@@ -1055,6 +1165,57 @@ Configuration parameter: <em>ext_temperature_sensor_enable</em>.</p>
 </ul>
 <p>The Sushi-IoT-Framework API provides an interface to this component, simplifying the process with minimal effort.<br />
 Configuration parameters: <em>http_post_delivery_address</em>, <em>use_wifi_for_http_post</em>.</p>
+<hr />
+<h2 id="issue-remarks"><strong>Issue &amp; Remarks</strong></h2>
+<h3 id="differences-vs-micropython"><strong>Differences vs MicroPython</strong></h3>
+<p>Sushi-IoT-Framework manages some system/hardware tasks, the following table highlights some points to consider during MicroPython scripting.<br />
+This table refers to the latest available version of Sushi-IoT-Framework-MicroPython integration: <a href="https://github.com/sushi-iot/sushi-iot-framework/tree/main/firmware">Sushi-IoT-Framework version</a>.</p>
+<table>
+<thead>
+<tr>
+<th>MicroPython module</th>
+<th>Status</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC</td>
+<td>Disabled. The MicroPython implementation uses an older version of driver that is not compatible with the current Sushi-IoT-Framework ADC management (most recent ESP32 drivers). Activating the ADC module is priority one. <!-- UPGRADE in the meantime <a href="link">Sushi-IoT-Framework-ADC-API</a> is available. --></td>
+<td></td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>Disabled</td>
+<td>Sushi-IoT-Framework manages Wi-Fi connections with all the most common options. Using MicroPython would cause a conflict.</td>
+</tr>
+</tbody>
+</table>
+<!-- Even though in the current release of Sushi-IoT-Framework there are some limitations, the roadmap is to remove them in future updates, allowing everything to be managed either by MicroPython or by Sushi-IoT-Framework modules.  -->
+
+<hr />
+<h3 id="known-bugs"><strong>Known bugs</strong></h3>
+<p>During MicroPython testing some bugs arose. The plan is to update the embedded MicroPython implementation to remove them.</p>
+<p><strong>MicroPython known bugs</strong></p>
+<table>
+<thead>
+<tr>
+<th>MicroPython module</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebREPL</td>
+<td>WebREPL is working but it's an experimental feature. During testing, cases were experienced where it completely blocked the microcontroller (requiring a power cycle).</td>
+</tr>
+<tr>
+<td>time</td>
+<td><em>time.localtime()</em> function returns the wrong year. Other fields are correct.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="mailto:mo.iot.wiz@gmail.com?subject=Issue%20report">Report an issue to mo.iot.wiz@gmail.com</a></p>
 <hr />
 
 
