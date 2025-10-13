@@ -377,57 +377,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="CORE MODULE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
-    <span class="md-ellipsis">
-      SYSTEM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modem" class="md-nav__link">
-    <span class="md-ellipsis">
-      MODEM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#power" class="md-nav__link">
-    <span class="md-ellipsis">
-      POWER
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      MENU
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPIO &amp; SENSORS
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -449,6 +398,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sushi_utils-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      sushi_utils module
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -465,21 +423,6 @@
       Examples
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#see-here-all-sushi-micropython-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      See here all Sushi MicroPython examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -651,57 +594,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="CORE MODULE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
-    <span class="md-ellipsis">
-      SYSTEM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modem" class="md-nav__link">
-    <span class="md-ellipsis">
-      MODEM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#power" class="md-nav__link">
-    <span class="md-ellipsis">
-      POWER
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      MENU
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPIO &amp; SENSORS
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -723,6 +615,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sushi_utils-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      sushi_utils module
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -739,21 +640,6 @@
       Examples
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#see-here-all-sushi-micropython-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      See here all Sushi MicroPython examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -864,103 +750,189 @@ For example, with just a few lines of code you can:</p>
 <li><strong>Extension modules</strong> - classic “.py” modules embedded in the firmware (as frozen modules). They rely on MicroPython interface in the background to perform the most common operations in the simplest way possible.</li>
 </ul>
 <hr />
-<h3 id="core-module">CORE MODULE</h3>
-<p>This module is the core of Sushi-IoT-Framework MicroPython interface, is developed in background in C language and include all Sushi-IoT-Framework MicroPython extensions.</p>
-<pre><code class="language-python">import sushi
-sushi.help()    #Show quick reference
-</code></pre>
-<p><strong><em>sushi</em></strong> module has one main function <strong><em>cmd</em></strong>:</p>
-<pre><code class="language-python">sushi.cmd(command , params)
-</code></pre>
-<p>All sushi.cmd("command",...) return a tuple: (<code>err</code>:int, <code>result</code>:var)<br />
-<code>err</code> = 0   =&gt; OK, <code>result</code> contains the command-specific value<br />
-<code>err</code> != 0  =&gt; ERROR, <code>result</code> contains the error message (str)  </p>
-<h4 id="system">SYSTEM</h4>
-<ul>
-<li><code>sushi.cmd("ver")</code> -&gt; str<br />
-  Show the firmware version of the board  </li>
-<li><code>sushi.cmd("restart" [, delay_ms:int=2000])</code> -&gt; none<br />
-  Restart the board after the optional delay in milliseconds  </li>
-<li><code>sushi.cmd("set_log", level:int [0=disable,1=enable,255=extended])</code> -&gt; none<br />
-  Enable or disable REPL logging  </li>
-<li><code>sushi.cmd("register", code:str)</code> -&gt; none<br />
-  Register the device with a unique 64-character code  </li>
-<li><code>sushi.cmd("factory_reset")</code> -&gt; none<br />
-  Restore factory default settings  </li>
-</ul>
-<h4 id="modem">MODEM</h4>
-<ul>
-<li>
-<p><code>sushi.cmd("set_modem_hnd", callback:func)</code> -&gt; none<br />
-  Set a callback to handle modem events.<br />
-<code>callback</code> args (a:tuple):<br />
-    a[0] = event type [0=SMS received, 1=Incoming call, 2=SMS TX result]<br />
-    a[1..] = event-specific data  </p>
-<ul>
-<li>if a[0] = 0 → (call_number:str, sms_text:str, time:str)  </li>
-<li>if a[0] = 1 → (call_number:str)  </li>
-<li>if a[0] = 2 → (id:int, tx_result:int [1=OK, 0=ERROR])  </li>
-</ul>
-</li>
-<li>
-<p><code>sushi.cmd("send_sms", (text:str, number:str))</code> -&gt; int<br />
-  Send an SMS message; returns the SMS ID if command accepted  </p>
-</li>
-</ul>
-<h4 id="power">POWER</h4>
-<ul>
-<li><code>sushi.cmd("read_power_state")</code> -&gt; int [1=ON, 0=OFF]<br />
-  Get the main power state  </li>
-<li><code>sushi.cmd("read_power_voltage")</code> -&gt; float (V)<br />
-  Read the main power voltage  </li>
-<li><code>sushi.cmd("read_batt_level")</code> -&gt; float (%)<br />
-  Get the battery level in percent  </li>
-<li><code>sushi.cmd("read_batt_voltage")</code> -&gt; float (V)<br />
-  Read the battery voltage  </li>
-</ul>
-<h4 id="menu">MENU</h4>
-<p><em>! before use this interface consider use frozen module <code>sushi_menu</code></em></p>
-<ul>
-<li><code>sushi.cmd("new_menu", title:str)</code> -&gt; int (menu_id)<br />
-  Create a new menu with the given title  </li>
-<li><code>sushi.cmd("new_menu_item_string", (desc:str, print_cb:func))</code> -&gt; int (entry_id)<br />
-  Create a new string menu item with a callback for printing  </li>
-<li><code>sushi.cmd("new_menu_item_edit_list", (desc:str, changed_cb:func, init_index:int, val1:str, val2:str, ...))</code> -&gt; int (entry_id)<br />
-  Create a new editable list menu item with initial value and change callback  </li>
-<li><code>sushi.cmd("add_entry_to_menu", (menu_id:int, entry_id:int))</code> -&gt; none<br />
-  Add an entry to the specified menu  </li>
-</ul>
-<h4 id="gpio-sensors">GPIO &amp; SENSORS</h4>
-<ul>
-<li><code>sushi.cmd("read_temperature", sensor:int [0=DS18B20-1,1=DS18B20-2])</code> -&gt; float (°C)<br />
-  Read temperature from the selected sensor  </li>
-<li><code>sushi.cmd("read_gpin", source:int [0=IO-Expander])</code> -&gt; int (status)<br />
-  Read digital input from the specified source  </li>
-<li><code>sushi.cmd("set_gpin_int", callback:func)</code> -&gt; none<br />
-  Set a callback to detect changes in input state<br />
-  args (a:tuple)<br />
-<code>callback</code> args (source:int [0 = IO-Expander])  </li>
-</ul>
-<h3 id="frozen-modules">FROZEN MODULES</h3>
-<h4 id="sushi_menu-module"><strong><em>sushi_menu</em></strong> module</h4>
-<p>Simplified user menu management: this module expose a class that can be used to integrate custom menu into the system.  </p>
-<p>Usage:  </p>
-<pre><code class="language-python">import sushi_menu
-sushi_menu.help()
-</code></pre>
-<pre><code class="language-python">from sushi_menu import Submenu
-# Add a menu to the on-device interface
-mymenu = Submenu('Test Menu')
+<h3 id="core-module"><strong>CORE MODULE</strong></h3>
+<p>To display a quick reference, call the <code>sushi.help(...)</code> function from the MicroPython REPL.<br />
+In the <a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples">examples section</a> you can see how the various available commands are applied.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
 
-# Add an entry to the menu
-mymenu.add_read_only_item(&quot;Test entry&quot; , ...)
-</code></pre>
-<ul>
-<li><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/modules/sushi_menu.py">Module Source code and DOC</a></li>
-<li><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples/menu_example.py">Full example</a></li>
-</ul>
+<span class="c1">### GENERAL INFO ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="err">`</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">core</span> <span class="n">module</span><span class="o">.</span> <span class="n">Other</span> <span class="n">modules</span> <span class="p">(</span><span class="n">like</span> <span class="err">`</span><span class="n">sushi_menu</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="n">sushi_utils</span><span class="err">`</span><span class="o">..</span><span class="p">)</span> <span class="n">are</span> <span class="s2">&quot;frozen&quot;</span> <span class="err">`</span><span class="o">.</span><span class="n">py</span><span class="err">`</span> <span class="n">modules</span><span class="o">.</span>
+
+<span class="o">*</span> <span class="n">All</span> <span class="n">calls</span> <span class="n">to</span> <span class="n">the</span> <span class="n">core</span> <span class="n">module</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;command&quot;</span><span class="p">,</span><span class="o">...</span><span class="p">)</span><span class="err">`</span> <span class="k">return</span> <span class="n">a</span> <span class="nb">tuple</span><span class="p">:</span> <span class="p">(</span><span class="err">`</span><span class="n">err</span><span class="err">`</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="err">`</span><span class="n">result</span><span class="err">`</span><span class="p">:</span><span class="n">var</span><span class="p">)</span>
+   <span class="err">`</span><span class="n">err</span><span class="err">`</span> <span class="o">=</span> <span class="mi">0</span>   <span class="o">=&gt;</span> <span class="n">OK</span><span class="p">,</span> <span class="err">`</span><span class="n">result</span><span class="err">`</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">command</span><span class="o">-</span><span class="n">specific</span> <span class="n">value</span>
+   <span class="err">`</span><span class="n">err</span><span class="err">`</span> <span class="o">!=</span> <span class="mi">0</span>  <span class="o">=&gt;</span> <span class="n">ERROR</span><span class="p">,</span> <span class="err">`</span><span class="n">result</span><span class="err">`</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">error</span> <span class="n">message</span> <span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="o">*</span> <span class="n">All</span> <span class="n">frozen</span> <span class="n">modules</span> <span class="n">show</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">help</span> <span class="n">calling</span> <span class="err">`</span><span class="n">module_name</span><span class="o">.</span><span class="n">help</span><span class="p">()</span><span class="err">`</span>
+
+<span class="c1">### SYSTEM ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+  <span class="n">Show</span> <span class="n">this</span> <span class="n">help</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;ver&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+  <span class="n">Show</span> <span class="n">the</span> <span class="n">firmware</span> <span class="n">version</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;restart&quot;</span> <span class="p">[,</span> <span class="n">delay_ms</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">2000</span><span class="p">])</span><span class="err">`</span>
+  <span class="n">Restart</span> <span class="n">the</span> <span class="n">board</span> <span class="n">after</span> <span class="n">the</span> <span class="n">optional</span> <span class="n">delay</span> <span class="ow">in</span> <span class="n">milliseconds</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;set_log&quot;</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span><span class="mi">255</span><span class="o">=</span><span class="n">extended</span><span class="p">])</span><span class="err">`</span>
+  <span class="n">Enable</span> <span class="ow">or</span> <span class="n">disable</span> <span class="n">REPL</span> <span class="n">logging</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;factory_reset&quot;</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Restore</span> <span class="n">factory</span> <span class="n">default</span> <span class="n">settings</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">type</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="o">=</span><span class="n">error</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="o">=</span><span class="n">status</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span><span class="s1">&#39;X&#39;</span><span class="o">=</span><span class="n">event</span><span class="p">]</span> <span class="p">,</span> <span class="n">entry</span><span class="p">:</span><span class="nb">str</span><span class="p">))</span><span class="err">`</span>
+  <span class="n">Add</span> <span class="n">an</span> <span class="n">entry</span> <span class="n">to</span> <span class="n">LOG</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="n">code</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Register</span> <span class="n">the</span> <span class="n">device</span> <span class="k">with</span> <span class="n">a</span> <span class="n">unique</span> <span class="mi">64</span><span class="o">-</span><span class="n">character</span> <span class="n">code</span>
+
+<span class="c1">### SETUP &amp; STATUS ###</span>
+<span class="c1"># Module `sushi_utils` : System setup &amp; status</span>
+<span class="o">*</span> <span class="n">Usage</span><span class="p">:</span> <span class="err">`</span><span class="n">sushi_utils</span><span class="o">.</span><span class="n">help</span><span class="p">()</span><span class="err">`</span>
+<span class="err">!</span> <span class="n">Get</span> <span class="n">board</span> <span class="n">pinout</span> <span class="k">with</span> <span class="err">`</span><span class="n">sushi_utils</span><span class="o">.</span><span class="n">pinout</span><span class="p">()</span><span class="err">`</span>
+
+<span class="c1"># CORE CALLS</span>
+<span class="err">!</span> <span class="n">These</span> <span class="n">are</span> <span class="n">lower</span> <span class="n">level</span> <span class="n">calls</span><span class="p">,</span> <span class="n">check</span> <span class="err">`</span><span class="n">sushi_utils</span><span class="err">`</span> <span class="n">first</span> <span class="n">that</span> <span class="n">uses</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">background</span><span class="o">.</span>
+
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;get_struct&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="s1">&#39;st&#39;</span><span class="o">=</span><span class="n">status</span><span class="p">,</span><span class="s1">&#39;cfg&#39;</span><span class="o">=</span><span class="n">configuration</span><span class="p">])</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="p">[</span><span class="n">JSON</span><span class="p">]</span>
+  <span class="n">Get</span> <span class="n">a</span> <span class="n">system</span> <span class="n">structure</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;send_struct&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">type</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="s1">&#39;cfg&#39;</span><span class="o">=</span><span class="n">configuration</span> <span class="p">,</span> <span class="s1">&#39;cmd&#39;</span><span class="o">=</span><span class="n">command</span><span class="p">]</span> <span class="p">,</span> <span class="n">data</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="n">JSON</span><span class="p">]</span> <span class="p">))</span><span class="err">`</span>
+  <span class="n">Send</span> <span class="n">a</span> <span class="n">system</span> <span class="n">structure</span>
+
+<span class="c1">### WIFI ###</span>
+<span class="err">!</span> <span class="n">Wi</span><span class="o">-</span><span class="n">Fi</span> <span class="n">configuration</span> <span class="ow">is</span> <span class="n">managed</span> <span class="n">by</span> <span class="err">`</span><span class="n">sushi_utils</span><span class="err">`</span> <span class="p">(</span><span class="n">see</span> <span class="s2">&quot;SETUP &amp; STATUS&quot;</span> <span class="n">section</span><span class="p">)</span>
+
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;wifi_stop&quot;</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Stop</span> <span class="n">wifi</span> <span class="n">management</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;wifi_restart&quot;</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Restart</span> <span class="n">wifi</span> <span class="n">management</span>
+
+<span class="c1">### MODEM ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;set_modem_hnd&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span><span class="n">func</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Set</span> <span class="n">a</span> <span class="n">callback</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">modem</span> <span class="n">events</span><span class="o">.</span>
+  <span class="err">`</span><span class="n">callback</span><span class="err">`</span> <span class="n">args</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">tuple</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span> <span class="nb">type</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="n">SMS</span> <span class="n">received</span><span class="p">,</span> <span class="mi">1</span><span class="o">=</span><span class="n">Incoming</span> <span class="n">call</span><span class="p">,</span> <span class="mi">2</span><span class="o">=</span><span class="n">SMS</span> <span class="n">TX</span> <span class="n">result</span><span class="p">]</span>
+    <span class="n">a</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span><span class="o">-</span><span class="n">specific</span> <span class="n">data</span>
+      <span class="o">-</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="err">→</span> <span class="p">(</span><span class="n">call_number</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">sms_text</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span>
+      <span class="o">-</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="err">→</span> <span class="p">(</span><span class="n">call_number</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span>
+      <span class="o">-</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="err">→</span> <span class="p">(</span><span class="nb">id</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">tx_result</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">1</span><span class="o">=</span><span class="n">OK</span><span class="p">,</span> <span class="mi">0</span><span class="o">=</span><span class="n">ERROR</span><span class="p">])</span>
+
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;send_sms&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">text</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span><span class="nb">str</span><span class="p">))</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+  <span class="n">Send</span> <span class="n">an</span> <span class="n">SMS</span> <span class="n">message</span><span class="p">;</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">SMS</span> <span class="n">ID</span> <span class="k">if</span> <span class="n">command</span> <span class="n">accepted</span>
+
+<span class="c1">### POWER ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_power_state&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">[</span><span class="mi">1</span><span class="o">=</span><span class="n">ON</span><span class="p">,</span> <span class="mi">0</span><span class="o">=</span><span class="n">OFF</span><span class="p">]</span>
+  <span class="n">Get</span> <span class="n">the</span> <span class="n">main</span> <span class="n">power</span> <span class="n">state</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_power_voltage&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span>
+  <span class="n">Read</span> <span class="n">the</span> <span class="n">main</span> <span class="n">power</span> <span class="n">voltage</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_batt_level&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="p">(</span><span class="n">perc</span><span class="p">)</span>
+  <span class="n">Get</span> <span class="n">the</span> <span class="n">battery</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">percent</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_batt_voltage&quot;</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span>
+  <span class="n">Read</span> <span class="n">the</span> <span class="n">battery</span> <span class="n">voltage</span>
+
+<span class="c1">### MENU ###</span>
+<span class="c1"># Module `sushi_menu` : Simplified user menu management</span>
+<span class="o">*</span> <span class="n">Usage</span><span class="p">:</span> <span class="err">`</span><span class="kn">import</span><span class="w"> </span><span class="nn">sushi_menu</span><span class="p">;</span> <span class="n">sushi_menu</span><span class="o">.</span><span class="n">help</span><span class="p">()</span><span class="err">`</span>
+
+<span class="c1"># CORE CALLS</span>
+<span class="err">!</span> <span class="n">These</span> <span class="n">are</span> <span class="n">lower</span> <span class="n">level</span> <span class="n">calls</span><span class="p">,</span> <span class="n">check</span> <span class="err">`</span><span class="n">sushi_menu</span><span class="err">`</span> <span class="n">first</span> <span class="n">that</span> <span class="n">uses</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">background</span><span class="o">.</span>
+
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;new_menu&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">(</span><span class="n">menu_id</span><span class="p">)</span>
+  <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">menu</span> <span class="k">with</span> <span class="n">the</span> <span class="n">given</span> <span class="n">title</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;new_menu_item_string&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">desc</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">print_cb</span><span class="p">:</span><span class="n">func</span><span class="p">))</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">(</span><span class="n">entry_id</span><span class="p">)</span>
+  <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">string</span> <span class="n">menu</span> <span class="n">item</span> <span class="k">with</span> <span class="n">a</span> <span class="n">callback</span> <span class="k">for</span> <span class="n">printing</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;new_menu_item_edit_list&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">desc</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">changed_cb</span><span class="p">:</span><span class="n">func</span><span class="p">,</span> <span class="n">init_index</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">val1</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">val2</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">(</span><span class="n">entry_id</span><span class="p">)</span>
+  <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">editable</span> <span class="nb">list</span> <span class="n">menu</span> <span class="n">item</span> <span class="k">with</span> <span class="n">initial</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">change</span> <span class="n">callback</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;add_entry_to_menu&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">menu_id</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">entry_id</span><span class="p">:</span><span class="nb">int</span><span class="p">))</span><span class="err">`</span>
+  <span class="n">Add</span> <span class="n">an</span> <span class="n">entry</span> <span class="n">to</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">menu</span>
+
+<span class="c1">### GPIO &amp; SENSORS ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_temperature&quot;</span><span class="p">,</span> <span class="n">sensor</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="n">DS18B20</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">DS18B20</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="p">(</span><span class="err">°</span><span class="n">C</span><span class="p">)</span>
+  <span class="n">Read</span> <span class="n">temperature</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">selected</span> <span class="n">sensor</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;read_ext_gpin&quot;</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="n">IO</span><span class="o">-</span><span class="n">Expander</span><span class="p">])</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span>
+  <span class="n">Read</span> <span class="n">external</span> <span class="n">digital</span> <span class="nb">input</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">specified</span> <span class="n">source</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;set_ext_gpin_int&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span><span class="n">func</span><span class="p">)</span><span class="err">`</span>
+  <span class="n">Set</span> <span class="n">a</span> <span class="n">callback</span> <span class="n">to</span> <span class="n">detect</span> <span class="n">changes</span> <span class="ow">in</span> <span class="n">external</span> <span class="nb">input</span> <span class="n">state</span>
+  <span class="err">`</span><span class="n">callback</span><span class="err">`</span> <span class="n">args</span> <span class="p">:(</span><span class="n">source</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">0</span> <span class="o">=</span> <span class="n">IO</span><span class="o">-</span><span class="n">Expander</span><span class="p">])</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;set_out_state&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="s2">&quot;RELAY_1..N&quot;</span> <span class="p">,</span> <span class="s2">&quot;BUZZER&quot;</span> <span class="p">,</span> <span class="s2">&quot;GPIO_1..N&quot;</span> <span class="p">,</span> <span class="o">...</span> <span class="p">]</span> <span class="p">,</span> <span class="n">state</span><span class="p">:</span><span class="nb">int</span> <span class="p">[</span><span class="mi">0</span> <span class="p">,</span><span class="mi">1</span><span class="p">]))</span><span class="err">`</span>
+  <span class="n">Set</span> <span class="n">digital</span> <span class="n">out</span> <span class="n">state</span> <span class="n">by</span> <span class="n">name</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">sushi</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;add_out&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span>  <span class="p">,</span> <span class="n">pin</span><span class="p">:</span><span class="nb">int</span><span class="p">))</span><span class="err">`</span>
+  <span class="n">Set</span> <span class="n">a</span> <span class="n">pin</span> <span class="k">as</span> <span class="n">out</span> <span class="ow">and</span> <span class="n">link</span> <span class="n">to</span> <span class="n">a</span> <span class="n">name</span>
+
+<span class="c1">### ONLINE DOC ###</span>
+<span class="n">Documentation</span><span class="p">:</span> <span class="s2">&quot;https://sushi-iot.github.io/sushi-iot-framework/&quot;</span>
+<span class="n">GitHub</span><span class="p">:</span> <span class="s2">&quot;https://github.com/sushi-iot/sushi-iot-framework&quot;</span>
+<span class="n">Examples</span><span class="p">:</span> <span class="s2">&quot;https://github.com/sushi-iot/sushi-iot-framework/tree/main/examples&quot;</span>
+</code></pre></div>
+
+<h3 id="frozen-modules"><strong>FROZEN MODULES</strong></h3>
+<p>Each frozen module includes its own help() function.</p>
+<h4 id="sushi_menu-module"><strong><em>sushi_menu</em></strong> module</h4>
+<p>Simplified user menu management: this module expose a class that can be used to integrate custom menu into the system.<br />
+<a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/modules/sushi_menu.py">Module Source code and DOC</a></p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi_menu</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+
+<span class="n">sushi_menu</span><span class="o">.</span><span class="n">py</span>
+<span class="n">User</span> <span class="n">menu</span> <span class="n">management</span> <span class="k">with</span> <span class="n">Sushi</span> <span class="n">Framework</span>
+
+  <span class="n">Submenu</span> <span class="k">class</span>
+<span class="w">    </span><span class="nc">Submenu</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+      <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">sub</span><span class="o">-</span><span class="n">menu</span> <span class="n">entry</span>
+      <span class="n">Args</span><span class="p">:</span>
+        <span class="n">title</span> <span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="p">:</span> <span class="n">menu</span> <span class="n">title</span>
+
+    <span class="n">Methods</span>
+      <span class="n">add_enum_editable_item</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">onchange</span><span class="p">,</span> <span class="n">value_index</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">Add</span> <span class="n">an</span> <span class="n">entry</span> <span class="k">with</span> <span class="n">a</span> <span class="n">selectable</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">values</span>
+        <span class="n">Args</span><span class="p">:</span>
+          <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">)</span>        <span class="p">:</span> <span class="n">entry</span> <span class="n">name</span> <span class="n">shown</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">menu</span>
+          <span class="n">onchange</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>   <span class="p">:</span> <span class="n">callback</span> <span class="n">called</span> <span class="n">when</span> <span class="n">value</span> <span class="n">changes</span>
+          <span class="n">value_index</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="p">:</span> <span class="n">initial</span> <span class="n">value</span> <span class="n">index</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+          <span class="o">*</span><span class="n">values</span> <span class="p">(</span><span class="nb">str</span><span class="o">...</span><span class="p">)</span>  <span class="p">:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">values</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="s2">&quot;OFF&quot;</span><span class="p">,</span><span class="s2">&quot;ON&quot;</span><span class="p">)</span>
+        <span class="n">Returns</span><span class="p">:</span>
+          <span class="nb">id</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="p">:</span> <span class="n">new</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">ID</span>
+
+      <span class="n">add_read_only_item</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">onprint</span><span class="p">)</span>
+        <span class="n">Add</span> <span class="n">a</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="n">entry</span>
+        <span class="n">Args</span><span class="p">:</span>
+          <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">)</span>       <span class="p">:</span> <span class="n">entry</span> <span class="n">name</span> <span class="n">shown</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">menu</span>
+          <span class="n">onprint</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>   <span class="p">:</span> <span class="n">callback</span> <span class="n">called</span> <span class="n">to</span> <span class="nb">print</span> <span class="n">the</span> <span class="n">value</span>
+        <span class="n">Returns</span><span class="p">:</span>
+          <span class="nb">id</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="p">:</span> <span class="n">new</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">ID</span>
+
+  <span class="n">Example</span><span class="p">:</span> <span class="n">see</span> <span class="s2">&quot;menu_example.py&quot;</span>
+</code></pre></div>
+
+<h4 id="sushi_utils-module"><strong><em>sushi_utils</em></strong> module</h4>
+<p>This module include system setup &amp; status functions.
+<a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/modules/sushi_utils.py">Module Source code and DOC</a></p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi_utils</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+
+<span class="c1">### SUSHI CONFIGURATION</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">get_sushi_config</span><span class="p">()</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="ow">or</span> <span class="kc">None</span> <span class="p">(</span><span class="k">if</span> <span class="n">error</span><span class="p">)</span>
+  <span class="n">Return</span> <span class="n">full</span> <span class="n">configuration</span> <span class="n">structure</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">set_sushi_config</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span><span class="nb">dict</span> <span class="p">)</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">[</span><span class="mi">0</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">not</span> <span class="n">changed</span> <span class="p">;</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">value</span> <span class="n">changed</span> <span class="n">no</span> <span class="n">restart</span> <span class="p">;</span> <span class="mi">2</span> <span class="o">=</span> <span class="n">value</span> <span class="n">changed</span> <span class="n">need</span> <span class="n">restart</span><span class="p">;</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">error</span><span class="p">]</span>
+  <span class="n">Set</span> <span class="n">configuration</span> <span class="n">parameters</span> <span class="p">(</span><span class="bp">self</span> <span class="n">restart</span> <span class="k">if</span> <span class="n">settings</span> <span class="n">changed</span><span class="p">)</span><span class="o">.</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">help</span><span class="p">(</span><span class="n">module</span><span class="p">:</span><span class="nb">str</span> <span class="p">[</span><span class="s1">&#39;SYSTEM&#39;</span> <span class="p">,</span> <span class="s1">&#39;WIFI&#39;</span><span class="p">])</span><span class="err">`</span>
+  <span class="n">List</span> <span class="n">module</span> <span class="n">specific</span> <span class="n">parameters</span><span class="o">.</span>
+
+<span class="c1">### SUSHI STATUS ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">get_sushi_status</span><span class="p">()</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="ow">or</span> <span class="kc">None</span> <span class="p">(</span><span class="k">if</span> <span class="n">error</span><span class="p">)</span>
+  <span class="n">Return</span> <span class="n">full</span> <span class="n">status</span> <span class="n">structure</span>
+
+<span class="c1">### BOARD PINOUT ###</span>
+<span class="o">*</span> <span class="err">`</span><span class="n">pinout</span><span class="p">()</span><span class="err">`</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+  <span class="n">Return</span> <span class="n">the</span> <span class="n">board</span> <span class="n">pinout</span> <span class="k">for</span> <span class="n">integrated</span> <span class="o">&amp;</span> <span class="n">general</span> <span class="n">purpose</span> <span class="n">functions</span>
+
+<span class="c1">### CUSTOM CONFIGURATION ###</span>
+<span class="o">*</span>  <span class="err">`</span><span class="n">load_setting</span><span class="p">(</span><span class="n">module</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">setting_str</span><span class="p">)</span><span class="err">`</span>  <span class="o">-&gt;</span> <span class="nb">str</span> <span class="ow">or</span> <span class="nb">int</span> <span class="ow">or</span> <span class="kc">None</span> <span class="p">(</span><span class="k">if</span> <span class="n">error</span><span class="p">)</span>
+  <span class="n">Load</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">configuration</span> <span class="n">parameter</span>
+<span class="o">*</span>  <span class="err">`</span><span class="n">save_setting</span><span class="p">(</span><span class="n">module</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">setting</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span><span class="nb">int</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">)</span><span class="err">`</span>  <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">[</span><span class="mi">0</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">not</span> <span class="n">changed</span> <span class="p">;</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">value</span> <span class="n">changed</span> <span class="p">;</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">error</span><span class="p">]</span>
+  <span class="n">Save</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">configuration</span> <span class="n">parameter</span>
+
+<span class="c1">### EXAMPLES ###</span>
+<span class="o">*</span> <span class="n">Call</span> <span class="n">help</span><span class="p">(</span><span class="s1">&#39;EXAMPLES&#39;</span><span class="p">)</span> <span class="n">to</span> <span class="n">see</span> <span class="n">some</span> <span class="n">code</span> <span class="n">example</span>
+
+<span class="c1">### ONLINE HELP ###</span>
+<span class="o">*</span> <span class="n">Online</span> <span class="n">help</span><span class="p">:</span><span class="s1">&#39;https://sushi-iot.github.io/sushi-iot-framework/&#39;</span>
+</code></pre></div>
+
 <h2 id="examples"><strong>Examples</strong></h2>
-<h3 id="see-here-all-sushi-micropython-examples"><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples">See here all Sushi MicroPython examples</a></h3>
+<p><strong><a href="https://github.com/sushi-iot/sushi-iot-framework/blob/main/examples">See here all Sushi MicroPython examples</a></strong></p>
 
 
 

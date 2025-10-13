@@ -307,15 +307,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hardware-compatibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hardware compatibility
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#wi-fi-management" class="md-nav__link">
     <span class="md-ellipsis">
       Wi-fi management
@@ -347,24 +338,6 @@
   <a href="#factory-restore" class="md-nav__link">
     <span class="md-ellipsis">
       Factory restore
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      System parameters
     </span>
   </a>
   
@@ -431,6 +404,48 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      System parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      SYSTEM MODULE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      WIFI MODULE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-compatibility-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware compatibility &amp; pinout
+    </span>
+  </a>
   
 </li>
       
@@ -609,15 +624,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hardware-compatibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hardware compatibility
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#wi-fi-management" class="md-nav__link">
     <span class="md-ellipsis">
       Wi-fi management
@@ -649,24 +655,6 @@
   <a href="#factory-restore" class="md-nav__link">
     <span class="md-ellipsis">
       Factory restore
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      System parameters
     </span>
   </a>
   
@@ -733,6 +721,48 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      System parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      SYSTEM MODULE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      WIFI MODULE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-compatibility-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware compatibility &amp; pinout
+    </span>
+  </a>
   
 </li>
       
@@ -851,19 +881,6 @@
 </table>
 <!-- Radar | Experimental task for radar management | Radar -->
 
-<h3 id="hardware-compatibility"><strong>Hardware compatibility</strong></h3>
-<p>Some of the tasks integrated into Sushi-IoT-Framework manage external hardware.<br />
-So the questions are:</p>
-<ul>
-<li>On which pin of the micro connect the external devices</li>
-<li>What's the exact models of the chip that are managed</li>
-</ul>
-<p>The base is always an ESP32 SoC then the exact pin mapping used to manage the externals peripherical depends on the specific board you're using.<br />
-It's possible that in the future there will be a "jolly" version that will let define all by configuration file, by now to ensure a correct and tested association (not every pin can do every function) the link is defined by the board-specific firmware.
-So to understand where connect the external devices, refer to your board hardware manual.</p>
-<p>The Sushi-IoT-Framework project is born with Sushi-IoT-Board so basically refer to <a href="https://sushi-iot.github.io/sushi-iot-board/hardware">Sushi-IoT-Board hardware Manual</a> to check what's the managed modules and which are the pins to be used.
-If you use a stand-alone ESP32DevKitC board start from the microcontroller schematic diagram (ESP32DevKitC board) to check where the external devices expect to be connected: 
-<a href="https://sushi-iot.github.io/sushi-iot-board/hardware#microcontroller-board">Sushi-IoT-Board micro</a>.</p>
 <hr />
 <h3 id="wi-fi-management"><strong>Wi-fi management</strong></h3>
 <p>The wi-fi management let setup the device to work in 2 ways:</p>
@@ -881,24 +898,27 @@ If you use a stand-alone ESP32DevKitC board start from the microcontroller schem
 </ul>
 <p><strong>Extra functions</strong></p>
 <ul>
-<li>The system parameter <em>powersave_time_wifi_off_min</em> defines the timeout (in minutes). <br />
-If the device cannot connect to the configured Wi-Fi network (or, in AP mode, no client is connected) for longer than this time, the wireless hardware is switched off to save energy.<br />
-Reconnection can then be done either by restarting the device or using the on-device interface.</li>
-<li>It is always possible to <strong>force the Wi-Fi to run in access point mode</strong> by holding the designated button for about 15 seconds.<br />
+<li>
+<p>It is always possible to <strong>force the Wi-Fi to run in access point mode</strong> by holding the designated button for about 15 seconds.<br />
 This does not reset the device to factory settings: it only forces Wi-Fi to start in AP mode with default network settings (IP address <code>192.168.1.100</code> and no password).<br />
 At the next reboot, the device will start according to the saved configuration.<br />
-The specific button depends on the CPU board:<blockquote>
+The specific button depends on the CPU board:</p>
+<blockquote>
 <ul>
 <li>ESP32DevKitC board: use the onboard "BOOT" button.</li>
 </ul>
 </blockquote>
+</li>
+<li>
+<p>The system parameter <em>powersave_time_wifi_off_min</em> defines the timeout (in minutes). <br />
+If the device cannot connect to the configured Wi-Fi network (or, in AP mode, no client is connected) for longer than this time, the wireless hardware is switched off to save energy.<br />
+Reconnection can then be done either by restarting the device or using the on-device interface.</p>
 </li>
 </ul>
 <hr />
 <h3 id="web-interface"><strong>Web interface</strong></h3>
 <p>The web interface is divided into the following sections:</p>
 <ul>
-<li><strong>HOME</strong>: customizable via the Sushi-IoT-Framework API, with links to application-specific pages  </li>
 <li><strong>SETTINGS</strong>: contains all system settings  </li>
 <li><strong>STATUS</strong>: displays system information  </li>
 </ul>
@@ -932,181 +952,14 @@ The specific button depends on the CPU board:<blockquote>
 </table>
 <hr />
 <h3 id="system-setup"><strong>System setup</strong></h3>
-<p>The Sushi-IoT-Framework can be configured through the web interface.<br />
-Basic settings are available as user controls directly in the interface, while <em>all</em> settings (basic + advanced) can be managed using a configuration file.<br />
-The configuration file can be saved or loaded from the web UI using the controls at the bottom of the <em>Settings</em> section.  </p>
+<p>The Sushi-IoT Framework can be configured either through the web interface or via the MicroPython REPL interface.<br />
+Basic settings are available as user controls directly in the web interface, while <em>all</em> settings (both basic and advanced) can be managed through a configuration file.<br />
+This configuration file can be saved or loaded from the web UI using the controls at the bottom of the <em>Settings</em> section, and it can also be accessed from the MicroPython file system and API.</p>
 <h4 id="factory-restore"><strong>Factory restore</strong></h4>
 <ul>
 <li>If you lose Wi-Fi connection and just need to access the web UI, you can force AP mode by pressing the dedicated onboard button (see <a href="./#wi-fi-management">Wi-Fi extra functions</a>).  </li>
 <li>A full factory restore can be performed by sending a command from the MicroPython REPL, see <a href="../coding/">Sushi-IoT-Framework coding</a>.  </li>
 </ul>
-<h4 id="advanced-settings"><strong>Advanced settings</strong></h4>
-<ul>
-<li>The most important settings are available in the web interface; direct editing of the configuration file should be done carefully (e.g., when you need access to all parameters or to save/restore a full configuration).  </li>
-<li>All Wi-Fi parameters are already exposed in the web interface, so they are not listed in the configuration file.  </li>
-</ul>
-<h4 id="system-parameters"><strong>System parameters</strong></h4>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>device_name</td>
-<td>Device name/description</td>
-<td>String</td>
-</tr>
-<tr>
-<td>data_file_version</td>
-<td>Configuration file version</td>
-<td>String</td>
-</tr>
-<tr>
-<td>ioex_enable</td>
-<td>Enable I/O expander management</td>
-<td>Integer<br>0=none<br>1=PCF8575</td>
-</tr>
-<tr>
-<td>ext_temperature_sensor_enable</td>
-<td>Enable temperature sensor</td>
-<td>Integer<br>0=none<br>1=DS18B20</td>
-</tr>
-<tr>
-<td>rele_out_enable</td>
-<td>Enable relay outputs</td>
-<td>Integer<br>0=none<br>1..2=number of relays</td>
-</tr>
-<tr>
-<td>keyboard_enable</td>
-<td>Enable keypad buttons (requires <em>ioex_enable</em>)</td>
-<td>Integer<br>0=none<br>N=number of buttons</td>
-</tr>
-<tr>
-<td>ext_leds_enable</td>
-<td>Number of external status LEDs connected to GPIO</td>
-<td>Integer<br>0=none<br>N=number of LEDs (mapped from GPIO0; max depends on board)<br>LEDs are named "EXT_LED_1", "EXT_LED_2", …</td>
-</tr>
-<tr>
-<td>lcd_enable</td>
-<td>Enable display</td>
-<td>Integer<br>0=none<br>1=OLED_SSD1306</td>
-</tr>
-<tr>
-<td>buzzer_enable</td>
-<td>Enable buzzer</td>
-<td>Integer<br>0=none<br>1=buzzer enabled</td>
-</tr>
-<tr>
-<td>battery_enable</td>
-<td>Battery level range</td>
-<td>Integer<br>0=none<br>1=reserved<br>2=1 li-ion cell (1S) ~3.0–4.2V<br>3=3 li-ion cells (3S) ~9–12.6V</td>
-</tr>
-<tr>
-<td>extension_modules</td>
-<td>Enable extra experimental modules</td>
-<td>String<br>Reserved</td>
-</tr>
-<tr>
-<td>system_info_log_frequency_min</td>
-<td>System info log frequency (minutes)</td>
-<td>Integer<br>0=never<br>N=minutes</td>
-</tr>
-<tr>
-<td>system_info_store_frequency_min</td>
-<td>System info storage frequency (minutes). Requires <em>system_info_csv_filter</em>.</td>
-<td>Integer<br>0=never<br>N=minutes</td>
-</tr>
-<tr>
-<td>system_info_csv_filter</td>
-<td>Filter for system status entries stored when <em>system_info_store_frequency_min</em> ≠ 0</td>
-<td>String<br><code>"&lt;entry_info_1&gt;*&lt;entry_info_2&gt;*..."</code></td>
-</tr>
-<tr>
-<td><span style="word-break: break-word;">system_info_send_http_post_frequency_min</span></td>
-<td>HTTP POST system info frequency (minutes). Posts are sent to <em>http_post_delivery_address</em>.</td>
-<td>Integer<br>0=never<br>N=minutes</td>
-</tr>
-<tr>
-<td>wifi_status_led</td>
-<td>Assign wi-fi status to an external LED</td>
-<td>String<br>"EXT_LED_1", "EXT_LED_2", …</td>
-</tr>
-<tr>
-<td>system_status_led</td>
-<td>Assign system status to an external LED</td>
-<td>String<br>"EXT_LED_1", "EXT_LED_2", …</td>
-</tr>
-<tr>
-<td>event_register_size_kb</td>
-<td>Event register file size</td>
-<td>Integer<br>0=no event file<br>N=Max KB</td>
-</tr>
-<tr>
-<td>time_zone_hours</td>
-<td>Time zone offset from UTC</td>
-<td>Integer<br>-12…+14</td>
-</tr>
-<tr>
-<td>time_auto_daylight_save_change</td>
-<td>Enable automatic daylight saving change (European rules)</td>
-<td>Integer<br>0=disabled<br>1=enabled</td>
-</tr>
-<tr>
-<td>powersave_time_wifi_off_min</td>
-<td>Auto wi-fi power-off after inactivity (minutes)</td>
-<td>Integer<br>0=disabled<br>N=minutes</td>
-</tr>
-<tr>
-<td>http_post_delivery_address</td>
-<td>Server address for HTTP POST. Custom application-specific data can be sent by the Sushi-IoT-Framework API</td>
-<td>String<br>Example: <span style="word-break: break-word;">"https://your_web_server/post_data.php"</span></td>
-</tr>
-<tr>
-<td>ntp_server_address</td>
-<td>NTP server address</td>
-<td>String<br>Default: "pool.ntp.org"</td>
-</tr>
-<tr>
-<td>use_wifi_for_http_post</td>
-<td>Use wi-fi before modem for HTTP POST</td>
-<td>Integer<br>0=disabled<br>1=enabled</td>
-</tr>
-<tr>
-<td>modem_enable</td>
-<td>Enable modem management</td>
-<td>Integer<br>0=none<br>1=SIMCOM7672X</td>
-</tr>
-<tr>
-<td>modem_sim_sms_center</td>
-<td>SIM SMS center number</td>
-<td>String<br>Example: "+393519999600"</td>
-</tr>
-<tr>
-<td>modem_sim_pin</td>
-<td>SIM PIN code</td>
-<td>String<br>Example: "1234"</td>
-</tr>
-<tr>
-<td>modem_apn</td>
-<td>SIM APN name</td>
-<td>String<br>Example: "iliad"</td>
-</tr>
-<tr>
-<td>modem_user</td>
-<td>APN user</td>
-<td>String<br>Optional</td>
-</tr>
-<tr>
-<td>modem_passwd</td>
-<td>APN password</td>
-<td>String<br>Optional</td>
-</tr>
-</tbody>
-</table>
 <hr />
 <h3 id="log-events"><strong>Log &amp; Events</strong></h3>
 <p>System log and events can be useful to monitor &amp; debug the system working. 
@@ -1120,7 +973,7 @@ Logs are cleared at every system restart while events are stored into a file. Th
 <li>Trace to log the system status (configuration parameter <em>system_info_log_frequency_min</em>).</li>
 <li>Store to file the system status (configuration parameters <em>system_info_store_frequency_min</em> and <em>system_info_csv_filter</em>).</li>
 <li>Send remotely the device status by http POST. Useful for example to monitor remotely an IoT device. This function requires setting the parameters <em>system_info_send_http_post_frequency_min</em> (frequency) and <em>http_post_delivery_address</em> (destination). </li>
-<li>Manage status LEDs. Let monitor the status by LEDs connected to the device. (configuration parameter <em>ext_leds_enable</em>)<blockquote>
+<li>Manage status LEDs. Let monitor the status by LEDs connected to the device.  <blockquote>
 <ul>
 <li>System status: function enabled by <em>system_status_led</em> parameter. 1 slow blink indicates OK, otherwise it's an error state. <!-- UPG:led codes details  --></li>
 <li>Wi-Fi status: function enabled by <em>wifi_status_led</em> parameter. 1 slow blink indicates client connected; quick continuous blink indicates access point mode; otherwise it's an error state. <!-- UPG:led codes details  --></li>
@@ -1166,6 +1019,219 @@ Configuration parameter: <em>ext_temperature_sensor_enable</em>.</p>
 <p>The Sushi-IoT-Framework API provides an interface to this component, simplifying the process with minimal effort.<br />
 Configuration parameters: <em>http_post_delivery_address</em>, <em>use_wifi_for_http_post</em>.</p>
 <hr />
+<h2 id="system-parameters"><strong>System parameters</strong></h2>
+<p>To display a brief list with all parameters call the <code>sushi_utils.help(...)</code> function from the MicroPython REPL.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi_utils</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+
+   <span class="o">...</span>
+
+<span class="c1">### AVAILABLE MODULES ###</span>
+  <span class="o">*</span> <span class="s1">&#39;SYSTEM&#39;</span>
+  <span class="o">*</span> <span class="s1">&#39;WIFI&#39;</span>
+
+<span class="n">Call</span> <span class="n">help</span><span class="p">(</span><span class="s1">&#39;MODULE&#39;</span><span class="p">)</span> <span class="n">to</span> <span class="n">see</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">a</span> <span class="n">module</span>
+</code></pre></div>
+
+<h3 id="system-module"><strong>SYSTEM MODULE</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi_utils</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;SYSTEM&#39;</span><span class="p">)</span>
+
+<span class="c1">### Parameters for module &#39;SYSTEM&#39;:</span>
+
+<span class="c1">## SYSTEM-CONFIG params</span>
+<span class="o">*</span> <span class="n">device_name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Device</span> <span class="n">name</span><span class="o">/</span><span class="n">description</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+<span class="o">*</span> <span class="n">data_file_version</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Configuration</span> <span class="n">file</span> <span class="n">version</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+
+<span class="c1">## SYSTEM-DATETIME params</span>
+<span class="o">*</span> <span class="n">time_zone_hours</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Time</span> <span class="n">zone</span> <span class="n">offset</span> <span class="kn">from</span><span class="w"> </span><span class="nn">UTC</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="o">-</span><span class="mi">12</span><span class="err">…</span><span class="o">+</span><span class="mi">14</span>
+<span class="o">*</span> <span class="n">time_auto_daylight_save_change</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">automatic</span> <span class="n">daylight</span> <span class="n">saving</span> <span class="n">change</span> <span class="p">(</span><span class="n">European</span> <span class="n">rules</span><span class="p">)</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">disabled</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">enabled</span>
+<span class="o">*</span> <span class="n">ntp_server_address</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">NTP</span> <span class="n">server</span> <span class="n">address</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="s1">&#39;pool.ntp.org&#39;</span>
+
+<span class="c1">## HARDWARE-SETUP params</span>
+<span class="o">*</span> <span class="n">board_model</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Board</span> <span class="n">model</span><span class="o">.</span> <span class="n">Call</span> <span class="s1">&#39;sushi_utils.pinout()&#39;</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">pinout</span><span class="o">.</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">ESP32</span><span class="o">-</span><span class="n">DevKitC</span> <span class="n">on</span> <span class="n">Sushi</span> <span class="n">Board</span>
+<span class="o">*</span> <span class="n">ioex_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">expander</span> <span class="n">management</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">PCF8575</span>
+<span class="o">*</span> <span class="n">ext_temperature_sensor_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">temperature</span> <span class="n">sensor</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">DS18B20</span>
+<span class="o">*</span> <span class="n">rele_out_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">relay</span> <span class="n">outputs</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mf">1..2</span><span class="o">=</span><span class="n">number</span> <span class="n">of</span> <span class="n">relays</span>
+<span class="o">*</span> <span class="n">keyboard_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">keypad</span> <span class="n">management</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mf">1.</span><span class="o">..</span><span class="n">N</span><span class="o">=</span><span class="n">N</span> <span class="n">keys</span> <span class="n">on</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span><span class="o">-</span><span class="n">Expander</span><span class="p">;</span><span class="mi">100</span><span class="o">=</span><span class="mi">4</span> <span class="n">keys</span> <span class="n">on</span> <span class="n">GPIN</span>
+<span class="o">*</span> <span class="n">lcd_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">display</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">OLED_SSD1306</span>
+<span class="o">*</span> <span class="n">buzzer_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">buzzer</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">buzzer</span> <span class="n">enabled</span>
+<span class="o">*</span> <span class="n">battery_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Battery</span> <span class="n">level</span> <span class="nb">range</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">reserved</span><span class="p">;</span><span class="mi">2</span><span class="o">=</span><span class="mi">1</span> <span class="n">li</span><span class="o">-</span><span class="n">ion</span> <span class="n">cell</span> <span class="p">(</span><span class="mi">1</span><span class="n">S</span><span class="p">)</span> <span class="o">~</span><span class="mf">3.0</span><span class="err">–</span><span class="mf">4.2</span><span class="n">V</span><span class="p">;</span><span class="mi">3</span><span class="o">=</span><span class="mi">3</span> <span class="n">li</span><span class="o">-</span><span class="n">ion</span> <span class="n">cells</span> <span class="p">(</span><span class="mi">3</span><span class="n">S</span><span class="p">)</span> <span class="o">~</span><span class="mi">9</span><span class="err">–</span><span class="mf">12.6</span><span class="n">V</span>
+
+<span class="c1">## SYSTEM-HEALTH&amp;MONITOR params</span>
+<span class="o">*</span> <span class="n">event_register_size_kb</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Event</span> <span class="n">register</span> <span class="n">file</span> <span class="n">size</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">no</span> <span class="n">event</span> <span class="n">file</span><span class="p">;</span><span class="n">N</span><span class="o">=</span><span class="n">Max</span> <span class="n">KB</span>
+<span class="o">*</span> <span class="n">system_info_log_frequency_min</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">System</span> <span class="n">info</span> <span class="n">log</span> <span class="n">frequency</span> <span class="p">(</span><span class="n">minutes</span><span class="p">)</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">never</span><span class="p">;</span><span class="n">N</span><span class="o">=</span><span class="n">minutes</span>
+<span class="o">*</span> <span class="n">system_info_store_frequency_min</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">System</span> <span class="n">info</span> <span class="n">storage</span> <span class="n">frequency</span> <span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="o">.</span> <span class="n">Requires</span> <span class="n">system_info_csv_filter</span><span class="o">.</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">never</span><span class="p">;</span><span class="n">N</span><span class="o">=</span><span class="n">minutes</span>
+<span class="o">*</span> <span class="n">system_info_csv_filter</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Filter</span> <span class="k">for</span> <span class="n">system</span> <span class="n">status</span> <span class="n">entries</span> <span class="n">stored</span> <span class="n">when</span> <span class="n">system_info_store_frequency_min</span> <span class="err">≠</span> <span class="mi">0</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="p">:</span> <span class="s1">&#39;&lt;entry_info_1&gt;*&lt;entry_info_2&gt;*...&#39;</span>
+<span class="o">*</span> <span class="n">system_info_send_http_post_frequency_min</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">HTTP</span> <span class="n">POST</span> <span class="n">system</span> <span class="n">info</span> <span class="n">frequency</span> <span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="o">.</span> <span class="n">Posts</span> <span class="n">are</span> <span class="n">sent</span> <span class="n">to</span> <span class="n">http_post_delivery_address</span><span class="o">.</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">never</span><span class="p">;</span><span class="n">N</span><span class="o">=</span><span class="n">minutes</span>
+
+<span class="c1">## SYSTEM-INTERFACE params</span>
+<span class="o">*</span> <span class="n">wifi_status_led</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Assign</span> <span class="n">wi</span><span class="o">-</span><span class="n">fi</span> <span class="n">status</span> <span class="n">to</span> <span class="n">an</span> <span class="n">external</span> <span class="n">LED</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="p">:</span> <span class="s1">&#39;GPIO_1..N&#39;</span><span class="p">,</span> <span class="s1">&#39;GPO_1..N&#39;</span> <span class="o">-</span> <span class="n">see</span> <span class="n">HW</span> <span class="n">pinout</span>
+<span class="o">*</span> <span class="n">system_status_led</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Assign</span> <span class="n">system</span> <span class="n">status</span> <span class="n">to</span> <span class="n">an</span> <span class="n">external</span> <span class="n">LED</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="p">:</span> <span class="s1">&#39;GPIO_1..N&#39;</span><span class="p">,</span> <span class="s1">&#39;GPO_1..N&#39;</span> <span class="o">-</span> <span class="n">see</span> <span class="n">HW</span> <span class="n">pinout</span>
+<span class="o">*</span> <span class="n">modem_status_led</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Assign</span> <span class="n">modem</span> <span class="n">status</span> <span class="n">to</span> <span class="n">an</span> <span class="n">external</span> <span class="n">LED</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="p">:</span> <span class="s1">&#39;GPIO_1..N&#39;</span><span class="p">,</span> <span class="s1">&#39;GPO1..N&#39;</span> <span class="o">-</span> <span class="n">see</span> <span class="n">HW</span> <span class="n">pinout</span>
+
+<span class="c1">## HTTP-DATA-MANAGER params</span>
+<span class="o">*</span> <span class="n">http_post_delivery_address</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Server</span> <span class="n">address</span> <span class="k">for</span> <span class="n">HTTP</span> <span class="n">POST</span><span class="o">.</span> <span class="n">Custom</span> <span class="n">application</span><span class="o">-</span><span class="n">specific</span> <span class="n">data</span> <span class="n">can</span> <span class="n">be</span> <span class="n">sent</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Sushi</span><span class="o">-</span><span class="n">IoT</span><span class="o">-</span><span class="n">Framework</span> <span class="n">API</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="s1">&#39;https://your_web_server/post_data.php&#39;</span>
+<span class="o">*</span> <span class="n">use_wifi_for_http_post</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Use</span> <span class="n">wi</span><span class="o">-</span><span class="n">fi</span> <span class="n">before</span> <span class="n">modem</span> <span class="k">for</span> <span class="n">HTTP</span> <span class="n">POST</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">disabled</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">enabled</span>
+
+<span class="c1">## MODEM params</span>
+<span class="o">*</span> <span class="n">modem_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">modem</span> <span class="n">management</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">none</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">SIMCOM7672X</span>
+<span class="o">*</span> <span class="n">modem_sim_sms_center</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">SIM</span> <span class="n">SMS</span> <span class="n">center</span> <span class="n">number</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="s1">&#39;+393519999600&#39;</span>
+<span class="o">*</span> <span class="n">modem_sim_pin</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">SIM</span> <span class="n">PIN</span> <span class="n">code</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="s1">&#39;1234&#39;</span>
+<span class="o">*</span> <span class="n">modem_apn</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">SIM</span> <span class="n">APN</span> <span class="n">name</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="s1">&#39;iliad&#39;</span>
+<span class="o">*</span> <span class="n">modem_user</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">APN</span> <span class="n">user</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Optional</span>
+<span class="o">*</span> <span class="n">modem_passwd</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">APN</span> <span class="n">password</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span><span class="o">.</span> <span class="n">Optional</span>
+
+<span class="c1">## DEBUG-EXPERIMENTAL-RESERVED params</span>
+<span class="o">*</span> <span class="n">powersave_time_wifi_off_min</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Auto</span> <span class="n">wi</span><span class="o">-</span><span class="n">fi</span> <span class="n">power</span><span class="o">-</span><span class="n">off</span> <span class="n">after</span> <span class="n">inactivity</span> <span class="p">(</span><span class="n">minutes</span><span class="p">)</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">disabled</span><span class="p">;</span><span class="n">N</span><span class="o">=</span><span class="n">minutes</span>
+<span class="o">*</span> <span class="n">debug_mode</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Debug</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">Reserved</span>
+<span class="o">*</span> <span class="n">extension_modules</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">extra</span> <span class="n">experimental</span> <span class="n">modules</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">Reserved</span>
+
+<span class="c1">## Online help:&#39;https://sushi-iot.github.io/sushi-iot-framework/&#39;</span>
+</code></pre></div>
+
+<h3 id="wifi-module"><strong>WIFI MODULE</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">sushi_utils</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;WIFI&#39;</span><span class="p">)</span>
+
+<span class="c1">### Parameters for module &#39;WIFI&#39;:</span>
+
+<span class="c1">## COMMON params</span>
+<span class="o">*</span> <span class="n">wifi_mode</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Wifi</span> <span class="n">mode</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">Disabled</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">Client</span><span class="p">;</span><span class="mi">2</span><span class="o">=</span><span class="n">Access</span> <span class="n">point</span>
+<span class="o">*</span> <span class="n">ip</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">IP</span> <span class="n">address</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">string</span>
+<span class="o">*</span> <span class="n">subnet</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Subnet</span> <span class="n">mask</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">string</span>
+<span class="o">*</span> <span class="n">gateway</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Gateway</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">string</span>
+
+<span class="c1">## WIFI-CLIENT-MODE params</span>
+<span class="o">*</span> <span class="n">cli_ssid</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Network</span> <span class="n">SSID</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+<span class="o">*</span> <span class="n">cli_passwd</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Network</span> <span class="n">password</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+<span class="o">*</span> <span class="n">cli_dhcp_enable</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Enable</span> <span class="n">DHCP</span> <span class="n">client</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="mi">0</span><span class="o">=</span><span class="n">disabled</span><span class="p">;</span><span class="mi">1</span><span class="o">=</span><span class="n">enabled</span>
+<span class="o">*</span> <span class="n">cli_dns_address</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">string</span>
+
+<span class="c1">## WIFI-ACCESS-POINT-MODE params</span>
+<span class="o">*</span> <span class="n">ap_passwd</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Access</span> <span class="n">point</span> <span class="n">password</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+<span class="o">*</span> <span class="n">ap_channel</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Access</span> <span class="n">point</span> <span class="n">channel</span>
+  <span class="n">Values</span><span class="p">:</span> <span class="n">String</span>
+
+<span class="c1">## Online help:&#39;https://sushi-iot.github.io/sushi-iot-framework/&#39;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="hardware-compatibility-pinout"><strong>Hardware compatibility &amp; pinout</strong></h2>
+<p>Some of the tasks integrated into the Sushi-IoT Framework manage external hardware, so it's important to know which pins of the microcontroller are used to connect the external devices.</p>
+<p>The base platform is always an ESP32 SoC, but the exact pin mapping used to control external peripherals depends on the specific board you're using.<br />
+To display a brief table with all board-specific pins, call the <code>sushi_utils.pinout()</code> function from the MicroPython REPL.</p>
+<p><strong>Show boards list</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">sushi_utils</span><span class="o">.</span><span class="n">pinout</span><span class="p">()</span>
+  <span class="n">Available</span> <span class="n">boards</span><span class="p">:</span>
+<span class="o">*</span>  <span class="n">ID</span> <span class="mi">0</span><span class="p">:</span> <span class="n">ESP32</span><span class="o">-</span><span class="n">DevKitC</span> <span class="n">on</span> <span class="n">Sushi</span> <span class="n">Board</span>
+</code></pre></div>
+
+<p><strong>Show board specific pinout</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">sushi_utils</span><span class="o">.</span><span class="n">pinout</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
+<span class="o">===</span> <span class="n">ESP32</span><span class="o">-</span><span class="n">DevKitC</span> <span class="n">on</span> <span class="n">Sushi</span> <span class="n">Board</span> <span class="p">[</span><span class="s2">&quot;board_model&quot;</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">0</span><span class="p">]</span> <span class="o">===</span>
+
+
+<span class="o">*</span> <span class="n">ONLINE</span> <span class="n">DOC</span>
+    <span class="o">-&gt;</span> <span class="n">ESP32</span><span class="o">-</span><span class="n">DevKitC</span><span class="p">:</span> <span class="s2">&quot;https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html&quot;</span>
+    <span class="o">-&gt;</span> <span class="n">Sushi</span> <span class="n">Board</span><span class="p">:</span> <span class="s2">&quot;https://sushi-iot.github.io/sushi-iot-board/&quot;</span>
+
+<span class="c1">### PINOUT</span>
+
+<span class="c1">#system(always present)</span>
+<span class="o">*</span> <span class="n">ON</span><span class="o">-</span><span class="n">BOARD</span><span class="o">-</span><span class="n">BUTTON</span><span class="p">:</span> <span class="mi">0</span>
+<span class="o">*</span> <span class="n">I2C_SDA_PIN</span><span class="p">:</span><span class="mi">21</span>
+<span class="o">*</span> <span class="n">I2C_SCL_PIN</span><span class="p">:</span><span class="mi">22</span>
+<span class="o">*</span> <span class="n">REPL_UART1_TX</span><span class="p">:</span><span class="mi">19</span>
+<span class="o">*</span> <span class="n">REPL_UART1_RX</span><span class="p">:</span><span class="mi">18</span>
+<span class="o">*</span> <span class="n">VIN</span><span class="o">-</span><span class="n">ADC</span><span class="p">:</span><span class="mi">36</span><span class="p">(</span><span class="n">VP</span><span class="p">)</span>
+
+<span class="c1">#GPIO(free I/O pins)</span>
+<span class="o">*</span> <span class="n">GPIO_1</span><span class="p">:</span><span class="mi">19</span>
+<span class="o">*</span> <span class="n">GPIO_2</span><span class="p">:</span><span class="mi">18</span>
+<span class="o">*</span> <span class="n">GPIO_3</span><span class="p">:</span><span class="mi">5</span>
+<span class="o">*</span> <span class="n">GPIO_4</span><span class="p">:</span><span class="mi">4</span>
+<span class="o">*</span> <span class="n">GPIO_5</span><span class="p">:</span><span class="mi">13</span>
+<span class="c1">#GPI(free Input only pins)</span>
+<span class="o">*</span> <span class="n">GPI_1</span><span class="p">:</span><span class="mi">39</span><span class="p">(</span><span class="n">VN</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">GPI_2</span><span class="p">:</span><span class="mi">35</span>
+<span class="c1">#GPO(free Output only pins)</span>
+<span class="o">*</span> <span class="n">GPO_1</span><span class="p">:</span><span class="mi">2</span>
+
+<span class="c1">#power(if &#39;battery_enable&#39; &gt; 0)</span>
+<span class="o">*</span> <span class="n">BATT</span><span class="o">-</span><span class="n">ADC</span><span class="p">:</span><span class="mi">34</span>
+
+<span class="c1">#modem(if &#39;modem_enable&#39; &gt; 0)</span>
+<span class="o">*</span> <span class="n">MODEM_UART_TX</span><span class="p">:</span><span class="mi">27</span>
+<span class="o">*</span> <span class="n">MODEM_UART_RX</span><span class="p">:</span><span class="mi">26</span>
+<span class="o">*</span> <span class="n">MODEM_PWKEY</span><span class="p">:</span><span class="mi">32</span>
+<span class="o">*</span> <span class="n">MODEM_POWER</span><span class="p">:</span><span class="mi">23</span>
+
+<span class="c1">#io-expander(if &#39;ioex_enable&#39; &gt; 0)</span>
+<span class="o">*</span> <span class="n">IOEXP_I2C_INT_PIN</span><span class="p">:</span><span class="mi">14</span>
+
+<span class="c1">#direct 4B keyboard(if &#39;keyboard_enable&#39;=100)</span>
+<span class="o">*</span> <span class="n">IN_1</span><span class="p">:</span> <span class="n">GPIO_4</span>
+<span class="o">*</span> <span class="n">IN_2</span><span class="p">:</span> <span class="n">GPIO_5</span>
+<span class="o">*</span> <span class="n">IN_3</span><span class="p">:</span> <span class="n">GPI_1</span>
+<span class="o">*</span> <span class="n">IN_4</span><span class="p">:</span> <span class="n">GPI_2</span>
+
+<span class="c1">#relays</span>
+<span class="o">*</span> <span class="n">RELE_1_PIN</span><span class="p">:</span><span class="mi">15</span> <span class="p">(</span><span class="k">if</span> <span class="s1">&#39;rele_out_enable&#39;</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">RELE_2_PIN</span><span class="p">:</span><span class="mi">12</span> <span class="p">(</span><span class="k">if</span> <span class="s1">&#39;rele_out_enable&#39;</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#temperature sensor(if &#39;ext_temperature_sensor_enable&#39; &gt; 0)</span>
+<span class="o">*</span> <span class="n">DS18B20_DATA</span><span class="p">:</span><span class="mi">33</span>
+
+<span class="c1">#buzzer(if &#39;buzzer_enable&#39; &gt; 0)</span>
+<span class="o">*</span> <span class="n">BUZZER_PIN</span><span class="p">:</span><span class="mi">25</span>
+</code></pre></div>
+
+<p>For more details, refer to your board’s hardware manual:</p>
+<ul>
+<li><strong>Sushi-IoT Board:</strong> see the <a href="https://sushi-iot.github.io/sushi-iot-board/hardware">Sushi-IoT Board Hardware Manual</a>.  </li>
+<li><strong>Standalone ESP32-DevKitC board:</strong> it uses the same pinout as the Sushi-IoT Board. Start from the microcontroller schematic (ESP32-DevKitC board) to check where the external devices are expected to be connected:<br />
+<a href="https://sushi-iot.github.io/sushi-iot-board/hardware#microcontroller-board">Sushi-IoT Board Microcontroller Section</a>.</li>
+</ul>
+<hr />
 <h2 id="issue-remarks"><strong>Issue &amp; Remarks</strong></h2>
 <h3 id="differences-vs-micropython"><strong>Differences vs MicroPython</strong></h3>
 <p>Sushi-IoT-Framework manages some system/hardware tasks, the following table highlights some points to consider during MicroPython scripting.<br />
@@ -1174,20 +1240,17 @@ This table refers to the latest available version of Sushi-IoT-Framework-MicroPy
 <thead>
 <tr>
 <th>MicroPython module</th>
-<th>Status</th>
 <th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ADC</td>
-<td>Disabled. The MicroPython implementation uses an older version of driver that is not compatible with the current Sushi-IoT-Framework ADC management (most recent ESP32 drivers). Activating the ADC module is priority one. <!-- UPGRADE in the meantime <a href="link">Sushi-IoT-Framework-ADC-API</a> is available. --></td>
-<td></td>
+<td>Disabled. The MicroPython implementation uses an older version of driver that is not compatible with the current Sushi-IoT-Framework ADC management (most recent ESP32 drivers). Reactivate the ADC module is priority one. <!-- UPGRADE in the meantime <a href="link">Sushi-IoT-Framework-ADC-API</a> is available. --></td>
 </tr>
 <tr>
 <td>Wi-Fi</td>
-<td>Disabled</td>
-<td>Sushi-IoT-Framework manages Wi-Fi connections with all the most common options. Using MicroPython would cause a conflict.</td>
+<td>Sushi-IoT Framework manages Wi-Fi connections with all the most common options. Using the native MicroPython Wi-Fi implementation at the same time would cause a conflict, so to do this you first need to disable Wi-Fi in the Sushi-IoT setup (wifi_mode = 0).</td>
 </tr>
 </tbody>
 </table>

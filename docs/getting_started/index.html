@@ -715,8 +715,9 @@ This is an easier alternative compared to the Python ".py" version of the tool, 
 <strong>If you use "esptool.py" replace "esptool" with "esptool.py"</strong> in all the following commands.</p>
 <h4 id="erase-the-chip"><strong>Erase the chip</strong></h4>
 <p>This is required especially when you are flashing the firmware for the first time.</p>
-<pre><code>esptool erase_flash
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">esptool</span><span class="w"> </span><span class="n">erase_flash</span>
+</code></pre></div>
+
 <h4 id="flash-the-firmware-file"><strong>Flash the firmware file</strong></h4>
 <p><code>esptool write_flash 0x0 FIRMWARE.bin</code></p>
 <p>Where "<em>FIRMWARE</em>" is the firmware .bin file that you downloaded. See <a href="../download/">Sushi-IoT-Framework firmware download</a>.</p>
@@ -724,8 +725,9 @@ This is an easier alternative compared to the Python ".py" version of the tool, 
 <ul>
 <li><strong>esptool fails to detect the correct COM port</strong>: specify it with the "--port" option in front of the command.</li>
 </ul>
-<pre><code>esptool --port PORTNAME ...
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">esptool</span><span class="w"> </span><span class="o">--</span><span class="n">port</span><span class="w"> </span><span class="n">PORTNAME</span><span class="w"> </span><span class="o">...</span>
+</code></pre></div>
+
 <p>Where <em>PORTNAME</em>:<br />
 - On Linux, usually something like <code>/dev/ttyUSB</code>.<br />
 - On Mac, usually something like <code>/dev/cu.usbmodem01</code>.<br />
@@ -740,7 +742,7 @@ This is an easier alternative compared to the Python ".py" version of the tool, 
 <p>You have two options:</p>
 <ul>
 <li><strong>Serial tool</strong>: connect with any serial terminal to the USB port.<br />
-  See the <a href="../manual/#coding">coding section of the manual</a> for details.</li>
+  See the <a href="../coding/">coding section of the manual</a> for details.</li>
 <li><strong>Web tool</strong>: use the online COM monitor provided by Espressif on the same page as the <a href="https://espressif.github.io/esptool-js/">ESP Flash Tool</a>.</li>
 </ul>
 <p>Steps for the web tool:</p>
@@ -750,13 +752,15 @@ This is an easier alternative compared to the Python ".py" version of the tool, 
 <li>On the device, press the <em>RESET</em> button.</li>
 </ol>
 <p>If everything works, you should see the device boot and the MicroPython REPL:</p>
-<pre><code>...
-MicroPython 495ce91-dirty on ... Sushi firmware framework on ... with ESP32
-Type &quot;help()&quot; for more information.
-&gt;&gt;&gt; 
-</code></pre>
+<div class="codehilite"><pre><span></span><code>...
+<span class="nv">MicroPython</span><span class="w"> </span><span class="mi">495</span><span class="nv">ce91</span><span class="o">-</span><span class="nv">dirty</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span>...<span class="w"> </span><span class="nv">Sushi</span><span class="w"> </span><span class="nv">firmware</span><span class="w"> </span><span class="nv">framework</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span>...<span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">ESP32</span>
+<span class="nv">Type</span><span class="w"> </span><span class="s2">&quot;help()&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">more</span><span class="w"> </span><span class="nv">information</span>.
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span>
+</code></pre></div>
+
 <hr />
 <h2 id="3-setup-and-wi-fi-connection"><strong>3. Setup and Wi-Fi connection</strong></h2>
+<p><strong>This step is optional if you plan to start coding the device through the USB REPL interface.</strong></p>
 <p>When the firmware is freshly flashed, <strong>the board starts Wi-Fi in access point mode</strong>.<br />
 By scanning available networks, you should see an SSID like <em>"Sushi-..."</em> (the suffix is the device MAC address).</p>
 <p>You can connect your PC or smartphone to this Wi-Fi network and open the web interface at:<br />
@@ -776,7 +780,7 @@ For more details about the Sushi-IoT-Framework web interface, see the <a href=".
 <h2 id="4-start-coding"><strong>4. Start coding</strong></h2>
 <p>Once the device is configured, you can start coding with your preferred MicroPython interface.<br />
 In this guide, the examples use <strong>Thonny</strong>, but several alternatives are available.  </p>
-<p>For more details, see the <a href="../manual/#coding">coding section</a>.</p>
+<p>For more details, see the <a href="../coding/">coding section</a>.</p>
 
 
 
