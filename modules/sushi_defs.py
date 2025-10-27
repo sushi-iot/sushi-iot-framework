@@ -108,10 +108,11 @@ BOARD_ID_0_HELP = """
 * IOEXP_I2C_INT_PIN:14
 
 #direct 4B keyboard(if 'keyboard_enable'=100)
-* IN_1: GPIO_4
-* IN_2: GPIO_5
-* IN_3: GPI_1
-* IN_4: GPI_2
+* COMMON: GND
+* IN_1: GPIO_2
+* IN_2: GPIO_3
+* IN_3: GPIO_4
+* IN_4: GPIO_5
 
 #relays
 * RELE_1_PIN:15 (if 'rele_out_enable'>0)

@@ -1,5 +1,7 @@
 # sushi_utils.py
-# Ver.2025-10-09@2204
+this_file_version="2025-10-22@2047"
+compatibility="sushi-iot_v25.08.29.0+"
+
 import sushi
 import ujson as json  # MicroPython
 import sushi_defs
@@ -118,11 +120,11 @@ def pinout(board_id=None):
         print(board["help"])
         
 
-# Help functions
-
-def help_print_params(mod):
-    current_cat = None
-    for param, info in sushi_defs.PARAMETERS[mod]:                
+def list_params(mod=None):
+    if isinstance(mod, str) and (mod.upper() in sushi_defs.PARAMETERS):
+      print(f"### Parameters for module '{mod}':")
+      current_cat = None
+      for param, info in sushi_defs.PARAMETERS[mod.upper()]:                
         cat = info.get("cat", "")
         if cat != current_cat and cat != "":
             print()                                   
@@ -134,45 +136,17 @@ def help_print_params(mod):
         rng  = info.get("range", "")
         print(f"* {param} ({typ}): {desc}\n"
               f"  Values: {rng}")
+    else:    
+        print(f"No help available for module '{mod}'")
+        print()
+        print("Available modules:")
+        for mod in sushi_defs.PARAMETERS:
+            print(f"  * '{mod.lower()}'")
+        print("\nCall list_params('MODULE') to see parameters of a module")
 
 
-def help(module=None):
-    """
-    Print help information:
-      - Usage examples for get_param and set_param
-      - List of available modules
-      - Parameters for a specific module
-    """
-    GENERAL_HELP_TXT = """
-### SUSHI CONFIGURATION
-* `get_sushi_config()` -> dict or None (if error)
-  Return full configuration structure
-* `set_sushi_config(settings:dict )` -> int [0 = value not changed ; 1 = value changed no restart ; 2 = value changed need restart; < 0 = error]
-  Set configuration parameters (self restart if settings changed).
-* `help(module:str ['SYSTEM' , 'WIFI'])`
-  List module specific parameters.
-  
-### SUSHI STATUS ###
-* `get_sushi_status()` -> dict or None (if error)
-  Return full status structure
+def help(what=None):
 
-### BOARD PINOUT ###
-* `pinout()` -> str
-  Return the board pinout for integrated & general purpose functions
-  
-### CUSTOM CONFIGURATION ###
-*  `load_setting(module:str, setting_str)`  -> str or int or None (if error)
-  Load a custom configuration parameter
-*  `save_setting(module:str, setting:str, value:int or str)`  -> int [0 = value not changed ; 1 = value changed ; < 0 = error]
-  Save a custom configuration parameter
-  
-### EXAMPLES ###
-* Call help('EXAMPLES') to see some code example
-
-### ONLINE HELP ###
-* Online help:'https://sushi-iot.github.io/sushi-iot-framework/'
-
-"""
     EXAMPLES_TXT = """
 ### USAGE EXAMPLES ###
 import sushi
@@ -214,31 +188,48 @@ if value != None:
 else:
     print("Error")
 """
-    # Show base help
-    if module is None:
-        print(GENERAL_HELP_TXT)
-        return
+    # Version
+    print(f"Module 'sushi_utils.py'")
+    print()
+    print(f"* Version:'{this_file_version}'")
+    print(f"* Compatibility:'{compatibility}'")
     
     # Show examples
-    mod = module.upper()
-    if mod == "EXAMPLES":
+    if isinstance(what, str) and what.upper() == "EXAMPLES":
         print(EXAMPLES_TXT)
         return
     
-    # Show parameters for the specified module
-    if mod not in sushi_defs.PARAMETERS:
-        print(f"No help available for module '{module}'")
-        print()
-        print("Available modules:")
-        for mod in sushi_defs.PARAMETERS:
-            print(f"  * '{mod}'")
-        print("\nCall help('MODULE') to see parameters of a module")
-        return
+    print(f"* Functions: call `sushi.help()`")
+    print(f"* Examples: call `sushi_utils.help('examples')`")
 
-    print(f"### Parameters for module '{mod}':")
-    help_print_params(mod)
-    
+"""
+## SETUP & STATUS ##
+* `sushi_utils.get_sushi_config()` -> dict or None (if error)  
+  Return full configuration structure
+* `sushi_utils.set_sushi_config(settings:dict )` -> int [0 = value not changed ; 1 = value changed no restart ; 2 = value changed need restart; < 0 = error]  
+  Set configuration parameters (self restart if settings changed).
+* `sushi_utils.list_params(module:str ['system' , 'wifi'])`  
+  List the available configuration params
+* `sushi_utils.get_sushi_status()` -> dict or None (if error)  
+  Return full status structure
+* `sushi_utils.load_setting(module:str, setting_str)`  -> str or int or None (if error)  
+  Load a custom configuration parameter
+* `sushi_utils.save_setting(module:str, setting:str, value:int or str)`  -> int [0 = value not changed ; 1 = value changed ; < 0 = error]  
+  Save a custom configuration parameter  
+  
+## GPIO & SENSORS ##
+* `sushi_utils.pinout()` -> str  
+  Return the board pinout for integrated & general purpose functions
+
+"""
 
 
+"""
+# CORE CALLS
+! These are lower level calls used in this module.
 
-
+* `sushi.cmd("get_struct", type:str ['st'=status,'cfg'=configuration])` -> str [JSON]
+  Get a system structure
+* `sushi.cmd("send_struct", (type:str ['cfg'=configuration , 'cmd'=command] , data:str [JSON] ))` 
+  Send a system structure
+"""

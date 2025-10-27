@@ -11,7 +11,7 @@ print("Testing GPIN...\n")
 
 
 # --- Read initial input value ---
-myinput = sushi.cmd('read_gpin', 0)
+myinput = sushi.cmd('read_ext_gpin', 0)
 if myinput[0] == 0:
     print("Initial GPIN value:", bin(myinput[1]))
 else:
@@ -23,7 +23,7 @@ else:
 def gpin_change_callback(source):
     # read GPIN again and print in binary
     if source == 0:
-        v = sushi.cmd('read_gpin', 0)
+        v = sushi.cmd('read_ext_gpin', 0)
         if v[0] == 0:
             print("GPIN value:", bin(v[1]))
         else:
@@ -31,5 +31,6 @@ def gpin_change_callback(source):
 
 
 # --- Register callback ---
-sushi.cmd('set_gpin_int', gpin_change_callback)
+sushi.cmd('set_ext_gpin_int', gpin_change_callback)
 print("\nCallback registered. Change the input and see the output.")
+

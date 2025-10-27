@@ -1,4 +1,7 @@
-# sushi_menu.py [v202508301231]
+# sushi_menu.py
+this_file_version="2025-10-22@2227"
+compatibility="sushi-iot_v25.08.29.0+"
+
 """sushi_menu.py
     Classes for user menu management with Sushi Framework"""
 import sushi as sb
@@ -47,34 +50,50 @@ class Submenu:
             sb.cmd('add_entry_to_menu' , (self.id,r[1]))	# adding new menu item to this menu 
             return r[1]
 def help():
-    print("""
-sushi_menu.py
-User menu management with Sushi Framework
+    # Version
+    print(f"Module 'sushi_menu.py'")
+    print()
+    print(f"* Version:'{this_file_version}'")
+    print(f"* Compatibility:'{compatibility}'")
+    print(f"* Functions: call `sushi.help()`")
+    
 
-  Submenu class
-    Submenu(title)
-      Create a new sub-menu entry
-      Args:
-        title (str) : menu title
+"""
+**Submenu class in `sushi_menu` module**
+    
+* `Submenu(menu_title:str)`  
+  Create a new "Submenu" item
+* Submenu methods:  
+  - `add_enum_editable_item(name, onchange , value_index , *values)`  
+    Add an entry with a selectable list of values  
+    Args:  
+      . name (str)        : entry name shown in the menu  
+      . onchange (func)   : callback called when value changes  
+      . value_index (int) : initial value index (0,1,2,...)  
+      . *values (str...)  : list of values (e.g. "OFF","ON")  
+    Returns:  
+      id (int) : new menu entry ID  
+  - `add_read_only_item(name, onprint)`  
+    Add a read-only entry  
+    Args:  
+      . name (str)       : entry name shown in the menu  
+      . onprint (func)   : callback called to print the value  
+    Returns:  
+      id (int) : new menu entry ID  
+* Example: see [menu_example.py](https://github.com/sushi-iot/sushi-iot-framework/tree/main/examples)  
+"""
+    
+    
+"""
+# CORE CALLS
+! These are lower level calls used in this module.
 
-    Methods
-      add_enum_editable_item(name, onchange, value_index, *values)
-        Add an entry with a selectable list of values
-        Args:
-          name (str)        : entry name shown in the menu
-          onchange (func)   : callback called when value changes
-          value_index (int) : initial value index (0,1,2,...)
-          *values (str...)  : list of values (e.g. "OFF","ON")
-        Returns:
-          id (int) : new menu entry ID
-
-      add_read_only_item(name, onprint)
-        Add a read-only entry
-        Args:
-          name (str)       : entry name shown in the menu
-          onprint (func)   : callback called to print the value
-        Returns:
-          id (int) : new menu entry ID
-
-  Example: see "menu_example.py"
-    """)
+* `sushi.cmd("new_menu", title:str)` -> int (menu_id)
+  Create a new menu with the given title
+* `sushi.cmd("new_menu_item_string", (desc:str, print_cb:func))` -> int (entry_id)
+  Create a new string menu item with a callback for printing
+* `sushi.cmd("new_menu_item_edit_list", (desc:str, changed_cb:func, init_index:int, val1:str, val2:str, ...))` -> int (entry_id)
+  Create a new editable list menu item with initial value and change callback
+* `sushi.cmd("add_entry_to_menu", (menu_id:int, entry_id:int))` 
+  Add an entry to the specified menu
+"""

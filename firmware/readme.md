@@ -1,11 +1,10 @@
 # Sushi-IoT-Framework Download Page
 
-NOTE: this page is under contruction. File binary will be available soon (before 2025/10)
 
 ## **Supported Boards**  
 
 Sushi-IoT-Framework can run on microcontroller boards based on ESP32 SoC.  
-There are many different ESP32 SoC variants, to start from somewhere the 1st version of Sushi-IoT-Framework support the WROVER model (the one with extra 4MB SPI-RAM).  
+There are many different ESP32 SoC variants, the 1st version of Sushi-IoT-Framework support the WROVER model (the one with extra 4MB SPI-RAM).  
 
 Board name | Description | ESP32 Chip |
 |---|---|---|
@@ -17,6 +16,10 @@ Generic ESP32-WROVER board | Any board using a compatible WROVER SoC can possibl
 
 ## **Latest versions**
 
-| Board           | File             | Firmware version | MicroPython version       | Description                |
-|-----------------|------------------|-----------------------------|---------------------------|----------------------------|
-| Sushi-IoT-Board | sib-1.2.0-2025.08.09.0.bin  | SIB-1.2.0-v2025.08.09.0     | 1.25.0 build 495ce91-dirty| Firmware for Sushi-IoT-Board |
+| Compatibility|File|Version|Notes|
+|----|----|----|-----|
+|* Sushi-IoT-Board<br>* Bare ESP32DevKitC-V4 | [sushi_iot_v25.10.25.0.bin](bin/sushi_iot_v25.10.25.0.bin)  | SIB-1.2.1-v25.10.25.0     | Generic Sushi-IoT firmware |
+
+## **Instruction**
+
+* [How flash firmware](https://sushi-iot.github.io/sushi-iot-framework/getting_started/)
