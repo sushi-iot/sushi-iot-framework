@@ -1,10 +1,22 @@
 # Sushi IoT Framework microPython quick reference  
 
+## Content
+
+This file contain the REPL output of the following MicroPython commands:
+
+* sushi.help()
+* sushi_utils.help()
+* sushi_utils.pinout() 
+* sushi_utils.pinout(0) [ESP32-DevKitC on Sushi Board]
+* sushi_utils.list_params()
+* sushi_utils.list_params('system')
+* sushi_utils.list_params('wifi')
+
 ## sushi.help()
 ```python
 >>> sushi.help()
 *This_help_version: 2025-10-22*  
-*Compatibility: sushi-iot_v25.08.29.0*  
+*Compatibility: sushi-iot_v25.10.25.0*  
 
 ## GENERAL INFO ##
 
