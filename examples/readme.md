@@ -18,5 +18,5 @@ In the REPL, run:
 or see the result directly [here](sushi-quick-reference.md).
 
 ## Resources
-[Firmware download](https://github.com/sushi-iot/sushi-iot-framework/tree/main/firmware)    
+[Firmware download](https://github.com/sushi-iot/sushi-iot-framework/releases)    
 [Online manual](https://sushi-iot.github.io/sushi-iot-framework/coding/)    
