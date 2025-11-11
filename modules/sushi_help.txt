@@ -1,5 +1,4 @@
-*This_help_version: 2025-10-22*  
-*Compatibility: sushi-iot_v25.10.25.0*  
+*This_help_version: 2025-11-05*  
 
 ## GENERAL INFO ##
 

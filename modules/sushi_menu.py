@@ -1,6 +1,5 @@
 # sushi_menu.py
-this_file_version="2025-10-22@2227"
-compatibility="sushi-iot_v25.08.29.0+"
+this_file_version="2025-11-05@1911"
 
 """sushi_menu.py
     Classes for user menu management with Sushi Framework"""
@@ -53,8 +52,8 @@ def help():
     # Version
     print(f"Module 'sushi_menu.py'")
     print()
+    print(f"* Description: User menu management")
     print(f"* Version:'{this_file_version}'")
-    print(f"* Compatibility:'{compatibility}'")
     print(f"* Functions: call `sushi.help()`")
     
 

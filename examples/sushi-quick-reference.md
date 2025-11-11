@@ -15,8 +15,7 @@ This file contain the REPL output of the following MicroPython commands:
 ## sushi.help()
 ```python
 >>> sushi.help()
-*This_help_version: 2025-10-22*  
-*Compatibility: sushi-iot_v25.10.25.0*  
+*This_help_version: 2025-11-05*  
 
 ## GENERAL INFO ##
 
@@ -154,8 +153,8 @@ This file contain the REPL output of the following MicroPython commands:
 >>> sushi_utils.help()
 Module 'sushi_utils.py'
 
-* Version:'2025-10-22@2047'
-* Compatibility:'sushi-iot_v25.08.29.0+'
+* Description: System setup, status & utilities
+* Version:'2025-11-05@1912'
 * Functions: call `sushi.help()`
 * Examples: call `sushi_utils.help('examples')`
 ```
@@ -185,53 +184,59 @@ Use pinout(<ID>) to view details.
 ### PINOUT
 
 #system(always present)
-* ON-BOARD-BUTTON: 0
-* I2C_SDA_PIN:21
-* I2C_SCL_PIN:22
-* REPL_UART1_TX:19
-* REPL_UART1_RX:18
-* VIN-ADC:36(VP)
+* ON-BOARD-BUTTON: GPIO0
+* I2C_SDA_PIN:GPIO21
+* I2C_SCL_PIN:GPIO22
+* REPL_UART1_TX:GPIO1(TX)
+* REPL_UART1_RX:GPIO3(RX)
+* VIN-ADC:GPIO36(VP)
 
-#GPIO(free I/O pins) 
-* GPIO_1:19
-* GPIO_2:18
-* GPIO_3:5
-* GPIO_4:4
-* GPIO_5:13
+#GPIO(free I/O pins)
+* GPIO_1:GPIO19
+* GPIO_2:GPIO18
+* GPIO_3:GPIO5
+* GPIO_4:GPIO4
+* GPIO_5:GPIO13
 #GPI(free Input only pins)
-* GPI_1:39(VN)
-* GPI_2:35
+* GPI_1:GPIO39(VN)
+* GPI_2:GPIO35
 #GPO(free Output only pins)
-* GPO_1:2
+* GPO_1:GPIO2
 
 #power(if 'battery_enable' > 0)
-* BATT-ADC:34
+* BATT-ADC:GPIO34[3]
 
 #modem(if 'modem_enable' > 0)
-* MODEM_UART_TX:27
-* MODEM_UART_RX:26	
-* MODEM_PWKEY:32
-* MODEM_POWER:23
+* MODEM_UART_TX:GPIO27[1]
+* MODEM_UART_RX:GPIO26[1]
+* MODEM_PWKEY:GPIO32[1]
+* MODEM_POWER:GPIO23[1]
 
 #io-expander(if 'ioex_enable' > 0)
-* IOEXP_I2C_INT_PIN:14
+* IOEXP_I2C_INT_PIN:GPIO14[1]
 
 #direct 4B keyboard(if 'keyboard_enable'=100)
 * COMMON: GND
-* IN_1: GPIO_2
-* IN_2: GPIO_3
-* IN_3: GPIO_4
-* IN_4: GPIO_5
+* IN_1(-): GPIO_1
+* IN_2(+): GPIO_2
+* IN_3(BACK): GPIO_3
+* IN_4(ENT): GPIO_4
 
 #relays
-* RELE_1_PIN:15 (if 'rele_out_enable'>0)
-* RELE_2_PIN:12 (if 'rele_out_enable'=2)
+* RELE_1_PIN:GPIO15 (if 'rele_out_enable'>0) [2]
+* RELE_2_PIN:GPIO12 (if 'rele_out_enable'=2) [2]
 
 #temperature sensor(if 'ext_temperature_sensor_enable' > 0)
-* DS18B20_DATA:33
+* DS18B20_DATA:GPIO33[1]
 
 #buzzer(if 'buzzer_enable' > 0)
-* BUZZER_PIN:25
+* BUZZER_PIN:GPIO25[1]
+
+#notes/syntax
+[1] : altenative use is GPIO
+[2] : altenative use is GPO
+[3] : altenative use is GPI
+GPIOXX : logical ESP32 function name. XX is the pin number to be used in the code.
 ```
 
 ## sushi_utils.list_params()

@@ -1,6 +1,5 @@
 # sushi_utils.py
-this_file_version="2025-10-22@2047"
-compatibility="sushi-iot_v25.08.29.0+"
+this_file_version="2025-11-11@1950"
 
 import sushi
 import ujson as json  # MicroPython
@@ -79,6 +78,8 @@ def set_sushi_config(config):
     json_str = json.dumps(config)
     err,res = sushi.cmd("send_struct", ('cfg' , json_str ))
     if err == 0:
+        if res == 2:
+            print("Configuration changed. Restarting...")
         return res  #return 0 : not changed ; 1 : changed, no restart ; 2 : changed, need restart.
     if type(res) == int and res < 0:
         return res        
@@ -191,8 +192,8 @@ else:
     # Version
     print(f"Module 'sushi_utils.py'")
     print()
+    print(f"* Description: System setup, status & utilities")
     print(f"* Version:'{this_file_version}'")
-    print(f"* Compatibility:'{compatibility}'")
     
     # Show examples
     if isinstance(what, str) and what.upper() == "EXAMPLES":
