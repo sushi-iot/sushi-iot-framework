@@ -34,7 +34,7 @@ All components can be found widely on the web, so just as example it's provided 
 
 ---
 ### Overview
-![Example overview](menu_example.jpg)
+<img src="menu_example.jpg" width=25% >
 
 ---
 ### Hardware connections table
