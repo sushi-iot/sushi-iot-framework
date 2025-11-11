@@ -2,8 +2,17 @@
 
 ## Basic examples
 
+### Bare ESP32DevKitC (Espressif official dev board)  
+<img src="../hardware/ESP32DevKitC-WROVER.png" width=10% >
+
+* **[Espressif ESP32DevKitC board](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/ESP32DevKitC-WROVER.md)**
+
+|Name|Description|
+|--------|--------|
+[dkc_menu](dkc_menu)|Add a custom menu (by 'sushi_menu' module) to user interface to switch ON/OFF a relay OUTPUT
+
 ### Sushi Board  
-![Sushi Board](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/sushi_board_1.png)
+<img src="../hardware/sushi_board_1.png" width=10% >
 
 * **[Sushi Board DOC](https://sushi-iot.github.io/sushi-iot-board/)**  
 
@@ -14,15 +23,6 @@
 [sb_send_sms](sb_send_sms)|Sends an SMS via the modem and shows the result using a callback
 [sb_receive_sms](sb_receive_sms)|receive SMS messages and print them to the REPL
 [sb_menu](sb_menu)|Add a custom menu (by 'sushi_menu' module) to user interface to switch ON/OFF a relay OUTPUT
-
-### Bare ESP32DevKitC (Espressif official dev board)  
-![ESP32DEVKITC-WROVER](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/ESP32DevKitC-WROVER.png)
-
-* **[Espressif ESP32DevKitC board](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/ESP32DevKitC-WROVER.md)**
-
-|Name|Description|
-|--------|--------|
-[dkc_menu](dkc_menu)|Add a custom menu (by 'sushi_menu' module) to user interface to switch ON/OFF a relay OUTPUT
 
 ## Quick reference
 In the REPL, run:
