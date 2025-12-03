@@ -2,19 +2,19 @@
 
 ## Basic examples
 
-### Bare ESP32DevKitC (Espressif official dev board)  
-<img src="../hardware/ESP32DevKitC-WROVER.png" width=10% >
+### Examples for Bare ESP32DevKitC (Espressif official dev board)  
+<img src="img/ESP32DevKitC-WROVER.png" width=20% >   
 
-* **[Espressif ESP32DevKitC board](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/ESP32DevKitC-WROVER.md)**
+**[Espressif ESP32DevKitC board](https://github.com/sushi-iot/sushi-iot-board/blob/main/hardware/modules/ESP32DevKitC-WROVER.md)**
 
 |Name|Description|
 |--------|--------|
 [dkc_menu](dkc_menu)|Add a custom menu (by 'sushi_menu' module) to user interface to switch ON/OFF a relay OUTPUT
 
-### Sushi Board  
-<img src="../hardware/sushi_board_1.png" width=10% >
+### Examples for Sushi Board  
+<img src="img/sushi_board_1.png" width=20% >
 
-* **[Sushi Board DOC](https://sushi-iot.github.io/sushi-iot-board/)**  
+**[Sushi Board DOC](https://sushi-iot.github.io/sushi-iot-board/)**  
 
 |Name|Description|
 |--------|--------|

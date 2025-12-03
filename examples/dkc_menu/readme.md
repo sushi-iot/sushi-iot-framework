@@ -24,10 +24,10 @@
 ### Hardware components
 This project uses the following hardware:
 
-* CPU : [ESP32DevKitC-WROVER module](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/ESP32DevKitC-WROVER.md)
-* Display : [SSD1306 OLED](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/OLED_SSD1306.md)
-* Relay: [D1 mini relay module](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/relay_d1_mini.md)
-* Keypad : [1x4 membrane keypad](https://github.com/sushi-iot/sushi-iot-framework/tree/main/hardware/keypad_4k.md)
+* CPU : [ESP32DevKitC-WROVER module](https://github.com/sushi-iot/sushi-iot-board/blob/main/hardware/modules/ESP32DevKitC-WROVER.md)
+* Display : [SSD1306 OLED](https://github.com/sushi-iot/sushi-iot-board/blob/main/hardware/modules/OLED_SSD1306.md)
+* Relay: [D1 mini relay module](https://github.com/sushi-iot/sushi-iot-board/blob/main/hardware/modules/relay_d1_mini.md)
+* Keypad : [1x4 membrane keypad](https://github.com/sushi-iot/sushi-iot-board/blob/main/hardware/modules/keypad_4k.md)
 
 In each component overview file there are some brief info.
 All components can be found widely on the web, so just as example it's provided some link where can be bought.
